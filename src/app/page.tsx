@@ -41,8 +41,8 @@ export default function Home() {
             alt="logo"
             className="md:w-[180px] w-[120px]"
           />
-          <Link href={'#WaitList'} className="md:w-[140px] w-[100px] flex items-center justify-center md:h-[50px] h-[40px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
-            <span className="transform skew-x-12 md:text-[15px] text-[12px]">
+          <Link href={'#WaitList'} className="2xl:w-[180px] md:w-[140px] w-[100px] flex items-center justify-center md:h-[50px] 2xl:h-[70px] h-[40px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
+            <span className="transform skew-x-12 2xl:text-[18px] md:text-[15px] text-[12px]">
               Join the Waitlist{" "}
             </span>
           </Link>
@@ -52,12 +52,12 @@ export default function Home() {
           <p className="2xl:text-[86px] xl:text-[68px] md:text-[68px] text-[45px] text-center !text-[#FFFFFF]">
             Intelligent Investing
           </p>
-          <p className="2xl:text-[20px] md:text-[18px] text-[17px] md:w-[48%] xl:w-[42%] 2xl:w-[29%] w-full text-center font-[100] mt-4 !text-[#FFFFFF]">
+          <p className="2xl:text-[24px] md:text-[18px] text-[17px] md:w-[48%] xl:w-[42%] 2xl:w-[32%] w-full text-center font-[100] mt-4 !text-[#FFFFFF]">
             GEN CAPITA empowers investors at every experience level to build
             wealth through global securities.
           </p>
-          <Link href={'#WaitList'} className="w-[140px] mt-8 flex items-center justify-center h-[50px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
-            <span className="transform skew-x-12 text-[15px] !text-white">
+          <Link href={'#WaitList'} className="2xl:w-[180px] w-[140px] mt-8 flex items-center justify-center 2xl:h-[70px] h-[50px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
+            <span className="transform skew-x-12 2xl:text-[18px] text-[15px] !text-white">
               Join the Waitlist{" "}
             </span>
           </Link>
@@ -67,11 +67,11 @@ export default function Home() {
           priority
           src={images.iPhone}
           alt="iphone"
-          className="absolute -bottom-[350px] xl:left-[39%] md:left-[34%] left-[10%] 2xl:left-[41%] 3xl:left-[43%]  4xl:left-[45%] right-0"
+          className="absolute 2xl:-bottom-[450px] -bottom-[350px] xl:left-[39%] md:left-[34%] left-[10%] 2xl:left-[40%] 3xl:left-[42%]  4xl:left-[45%] right-0"
         />
       </div>
 
-      <div className="bg-white lg:gap-8 md:mt-[420px] mt-[430px] px-[5%] pb-[50px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  justify-between items-center md:gap-y-[80px] gap-y-[32px] ">
+      <div className="bg-white lg:gap-8 2xl:mt-[520px] md:mt-[420px] mt-[430px] px-[5%] pb-[50px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  justify-between items-center md:gap-y-[80px] gap-y-[32px] ">
         <div className="flex md:justify-start items-center  gap-6 md:flex-row flex-col justify-center text-center md:text-start ">
           <Image priority src={images?.buysell} alt="" width={90} height={90} className='2xl:w-[80px] w-[60px]'/>
           <p className="2xl:text-[18px] text-[14px] text-[#162930] font-[100] leading-[26px] tracking-[-0.2px]  2xl:pr-10">
@@ -129,7 +129,7 @@ export default function Home() {
 
       <div className="px-[5%] lg:pt-[66px] pt-[64px] bg-white pb-[60px]  flex flex-col gap-10 ">
         <div
-          className={` !bg-[#071A00]  2xl:py-[100px] lg:py-[50px] lg:px-[30px] 2xl:px-[60px] md:px-8 px-4 py-[40px] rounded-[16px] relative  overflow-hidden`}
+          className={` !bg-[#071A00] 2xl:py-[100px] lg:py-[70px] lg:px-[40px] 2xl:px-[60px] md:px-8 px-4 py-[40px] rounded-[16px] relative  overflow-hidden`}
         >
           <div className="xl:w-[50%] lg:w-[45%] lg:pb-0 md:pb-[65%] pb-[230px]">
             <div className="flex justify-start items-start flex-col gap-4 pb-[39px] border-b border-[#3CE500] pr-10 ">
@@ -209,7 +209,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-[#071A00] rounded-2xl 2xl:py-[100px] lg:py-[50px] lg:px-[30px] 2xl:px-[60px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row gap-8 lg:gap-0 flex-col items-center">
+        <div className="bg-[#071A00] rounded-2xl 2xl:py-[100px] lg:py-[50px] lg:px-[40px] 2xl:px-[60px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row gap-8 lg:gap-0 flex-col items-center">
           <div className="lg:w-[50%]">
             <div className="flex justify-start items-start flex-col gap-4 pb-[39px] border-b border-[#3CE500] pr-10 ">
               <p className="text-white lg:text-[36px] text-[28px] font-bold leading-[38px] tracking-[-1.38px] ">
@@ -287,7 +287,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-[#071A00] rounded-2xl 2xl:py-[100px] lg:py-[50px] lg:px-[30px] 2xl:px-[60px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row flex-col gap-8 lg:gap-0 items-center ">
+        <div className="bg-[#071A00] rounded-2xl 2xl:py-[100px] lg:py-[50px] lg:px-[40px] 2xl:px-[60px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row flex-col gap-8 lg:gap-0 items-center ">
           <div className="lg:w-[50%]">
             <div className="flex justify-start items-start flex-col gap-4 pb-[39px] border-b border-[#3CE500] pr-10 ">
               <p className="text-white lg:text-[36px] text-[28px] font-bold leading-[38px] tracking-[-1.38px] ">
