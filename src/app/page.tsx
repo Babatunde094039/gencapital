@@ -49,10 +49,10 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center justify-center pt-14 px-[5%] md:px-0">
-          <p className="md:text-[68px] text-[45px] text-center !text-[#FFFFFF]">
+          <p className="2xl:text-[86px] xl:text-[68px] md:text-[68px] text-[45px] text-center !text-[#FFFFFF]">
             Intelligent Investing
           </p>
-          <p className="2xl:text-[20px] md:text-[18px] text-[17px] md:w-[32%] 2xl:w-[29%] w-full text-center font-[100] mt-4">
+          <p className="2xl:text-[20px] md:text-[18px] text-[17px] md:w-[48%] xl:w-[42%] 2xl:w-[29%] w-full text-center font-[100] mt-4 !text-[#FFFFFF]">
             GEN CAPITA empowers investors at every experience level to build
             wealth through global securities.
           </p>
