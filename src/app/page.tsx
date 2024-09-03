@@ -42,7 +42,7 @@ export default function Home() {
             className="md:w-[180px] w-[120px]"
           />
           <Link href={'#WaitList'} className="2xl:w-[180px] md:w-[140px] w-[100px] flex items-center justify-center md:h-[50px] 2xl:h-[70px] h-[40px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
-            <span className="transform skew-x-12 2xl:text-[18px] md:text-[15px] text-[12px]">
+            <span className="transform skew-x-12 2xl:text-[18px] md:text-[15px] text-[12px] !text-[#FFFFFF]">
               Join the Waitlist{" "}
             </span>
           </Link>
