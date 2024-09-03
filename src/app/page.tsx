@@ -209,7 +209,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-[#071A00] rounded-2xl 2xl:py-[100px] lg:py-[50px] lg:px-[40px] 2xl:px-[60px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row gap-8 lg:gap-0 flex-col items-center">
+        <div className="bg-[#071A00] rounded-2xl 2xl:py-[100px] lg:py-[60px] lg:px-[40px] 2xl:px-[60px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row gap-8 lg:gap-0 flex-col items-center">
           <div className="lg:w-[50%]">
             <div className="flex justify-start items-start flex-col gap-4 pb-[39px] border-b border-[#3CE500] pr-10 ">
               <p className="text-white lg:text-[36px] text-[28px] font-bold leading-[38px] tracking-[-1.38px] ">
