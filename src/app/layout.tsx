@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={OpenSauceOne.className}>
+      <body className={`${OpenSauceOne.className} !bg-[#FFFFFF]`}>
         <ConfigProvider theme={antdTheme}>
           <AntdRegistry>{children}</AntdRegistry>
         </ConfigProvider>

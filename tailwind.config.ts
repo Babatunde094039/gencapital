@@ -36,6 +36,9 @@ const config: Config = {
 
       '4xl': '2500px',
       // => @media (min-width: 2500px) { ... }
+
+      '5xl': '3500px',
+      // => @media (min-width: 2500px) { ... }
     },
   },
   plugins: [],
