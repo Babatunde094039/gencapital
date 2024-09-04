@@ -117,7 +117,7 @@ export default function Home() {
             Count on robust security to protect your investments
           </p>
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 items-center md:items-start">
           <span className="text-[#000000B2] font-[100] text-[14px] 3xl:text-[18px] 2xl:text-[16px]">
             Do you have questions?
           </span>
