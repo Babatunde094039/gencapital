@@ -72,7 +72,7 @@ export default function Home() {
           />
         </div>
 
-      <div className="bg-white lg:gap-8 3xl:mt-[480px] md:mt-[400px] mt-[430px] px-[5%] xl:px-0 xl:w-[1240px] 2xl:px-0 pb-[50px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  justify-between items-center md:gap-y-[80px] gap-y-[32px] max-w-[1440px] !mx-auto">
+      <div className="bg-white lg:gap-8 md:mt-[400px] mt-[430px] px-[5%] xl:px-0 xl:w-[1240px] 2xl:px-0 pb-[50px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  justify-between items-center md:gap-y-[80px] gap-y-[32px] max-w-[1440px] !mx-auto">
         <div className="flex md:justify-start items-center  gap-4 md:flex-row flex-col justify-center text-center md:text-start ">
           <Image priority src={images?.buysell} alt="" width={90} height={90} className='2xl:w-[80px] w-[70px]'/>
           <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] leading-[26px] tracking-[-0.2px] xl:w-[226px] 2xl:w-full md:w-full w-[230px]  2xl:pr-10">
@@ -94,7 +94,7 @@ export default function Home() {
         </div>
         <div className="flex md:justify-start items-center  gap-4 md:flex-row flex-col justify-center text-center md:text-start  ">
           <Image priority src={images?.trade} alt="" width={90} height={90} className='2xl:w-[80px] w-[70px]'/>
-          <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] leading-[26px] md:w-full w-[210px] tracking-[-0.2px]  2xl:pr-10">
+          <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] leading-[26px]  xl:w-[246px] 2xl:w-full md:w-full w-[210px] tracking-[-0.2px]  2xl:pr-10">
             Trade like a pro with advanced tools
           </p>
         </div>
