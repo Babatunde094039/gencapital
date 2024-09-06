@@ -33,110 +33,111 @@ export default function Home() {
 
   return (
     <main className="bg-white">
-      <div className="h-[800px] w-full  bg-custom-gradient relative">
-        <div className="flex justify-between items-center bg-[#061A01] w-full md:px-[4%] 2xl:px-[2%] 3xl:px-0 px-[8%] py-5 max-w-[1340px] !mx-auto">
+        <div className="bg-[#061A01] w-full md:h-[80px] h-[72px] flex items-center">
+          <div className="flex justify-between items-center bg-[#061A01] xl:w-[1280px] w-full h-[56px] xl:px-[32px] px-[8%] py-5 max-w-[1440px] !mx-auto">
+            <Image
+              priority
+              src={images.genCapitaLogo}
+              alt="logo"
+              className="md:w-[180px] w-[120px]"
+            />
+            <Link href={'#WaitList'} className="2xl:w-[155px] md:w-[140px] w-[100px] flex items-center justify-center md:h-[50px] 2xl:h-[55px] h-[40px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
+              <span className="transform skew-x-12 2xl:text-[16px] md:text-[15px] text-[12px] !text-[#FFFFFF]">
+                Join the Waitlist{" "}
+              </span>
+            </Link>
+          </div>
+        </div>
+        <div className=" h-[771px] w-full bg-custom-gradient relative">
+          <div className="flex flex-col items-center justify-center pt-16 px-[5%] 2xl:w-full xl:w-[883px] md:px-0 max-w-[1440px] !mx-auto">
+            <p className="font-[700] 3xl:text-[92px] xl:text-[82px] lg:text-[68px] text-[55px] text-center !text-[#FFFFFF] leading-[70px] md:leading-none">
+              Intelligent Investing
+            </p>
+            <p className="3xl:text-[24px] md:text-[22px] text-[18px] md:w-[48%] xl:w-[626px] w-full text-center font-[100] mt-6 !text-[#FFFFFF]">
+              GEN CAPITA empowers investors at every experience level to build
+              wealth through global securities.
+            </p>
+            <Link href={'#WaitList'} className="2xl:w-[155px] w-[140px] mt-8 flex items-center justify-center 2xl:h-[55px] h-[50px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
+              <span className="transform skew-x-12 2xl:text-[16px] text-[15px] !text-white">
+                Join the Waitlist{" "}
+              </span>
+            </Link>
+          </div>
+
           <Image
             priority
-            src={images.genCapitaLogo}
-            alt="logo"
-            className="md:w-[180px] w-[120px]"
+            src={images.iPhone}
+            alt="iphone"
+            className="absolute 3xl:-bottom-[52%] 2xl:-bottom-[46%] xl:-bottom-[40%] -bottom-[42%] xl:left-[39%] md:left-[34%] left-[8%] 2xl:left-[40.5%] 3xl:left-[42%]  4xl:left-[44.5%]  5xl:left-[46.5%] right-0"
           />
-          <Link href={'#WaitList'} className="2xl:w-[155px] md:w-[140px] w-[100px] flex items-center justify-center md:h-[50px] 2xl:h-[55px] h-[40px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
-            <span className="transform skew-x-12 2xl:text-[16px] md:text-[15px] text-[12px] !text-[#FFFFFF]">
-              Join the Waitlist{" "}
-            </span>
-          </Link>
         </div>
 
-        <div className="flex flex-col items-center justify-center pt-14 px-[5%] md:px-0 max-w-[1440px] !mx-auto">
-          <p className="font-[700] 3xl:text-[82px] xl:text-[72px] md:text-[68px] text-[45px] text-center !text-[#FFFFFF]">
-            Intelligent Investing
-          </p>
-          <p className="3xl:text-[24px] md:text-[18px] text-[17px] md:w-[48%] xl:w-[33%] 3xl:w-[43%] w-full text-center font-[100] mt-2 !text-[#FFFFFF]">
-            GEN CAPITA empowers investors at every experience level to build
-            wealth through global securities.
-          </p>
-          <Link href={'#WaitList'} className="2xl:w-[155px] w-[140px] mt-8 flex items-center justify-center 2xl:h-[55px] h-[50px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
-            <span className="transform skew-x-12 2xl:text-[16px] text-[15px] !text-white">
-              Join the Waitlist{" "}
-            </span>
-          </Link>
-        </div>
-
-        <Image
-          priority
-          src={images.iPhone}
-          alt="iphone"
-          className="absolute 3xl:-bottom-[52%] 2xl:-bottom-[46%] -bottom-[44%] xl:left-[39%] md:left-[34%] left-[10%] 2xl:left-[40.5%] 3xl:left-[42%]  4xl:left-[44.5%]  5xl:left-[46.5%] right-0"
-        />
-      </div>
-
-      <div className="bg-white lg:gap-8 3xl:mt-[480px] md:mt-[420px] mt-[430px] px-[5%] 2xl:px-0 pb-[50px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  justify-between items-center md:gap-y-[80px] gap-y-[32px] max-w-[1340px] !mx-auto">
-        <div className="flex md:justify-start items-center  gap-6 md:flex-row flex-col justify-center text-center md:text-start ">
-          <Image priority src={images?.buysell} alt="" width={90} height={90} className='2xl:w-[80px] w-[60px]'/>
-          <p className="3xl:text-[18px] 2xl:text-[16px] text-[14px] text-[#162930] font-[100] leading-[26px] tracking-[-0.2px]  2xl:pr-10">
+      <div className="bg-white lg:gap-8 3xl:mt-[480px] md:mt-[400px] mt-[430px] px-[5%] xl:px-0 xl:w-[1240px] 2xl:px-0 pb-[50px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  justify-between items-center md:gap-y-[80px] gap-y-[32px] max-w-[1440px] !mx-auto">
+        <div className="flex md:justify-start items-center  gap-4 md:flex-row flex-col justify-center text-center md:text-start ">
+          <Image priority src={images?.buysell} alt="" width={90} height={90} className='2xl:w-[80px] w-[70px]'/>
+          <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] leading-[26px] tracking-[-0.2px] xl:w-[226px] 2xl:w-full md:w-full w-[230px]  2xl:pr-10">
             Buy/Sell the world’s most sought assets
           </p>
         </div>
-        <div className="flex md:justify-start items-center  gap-6 md:flex-row flex-col justify-center text-center md:text-start  ">
+        <div className="flex md:justify-start items-center  gap-4 md:flex-row flex-col justify-center text-center md:text-start  ">
           <Image
             priority
             src={images?.portfolio}
             alt=""
             width={90}
             height={90}
-            className='2xl:w-[80px] w-[60px]'
+            className='2xl:w-[80px] w-[70px]'
           />
-          <p className="3xl:text-[18px] 2xl:text-[16px] text-[14px] text-[#162930] font-[100] leading-[26px] tracking-[-0.2px]  2xl:pr-10">
+          <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] leading-[26px] xl:w-[246px] 2xl:w-full md:w-full w-[210px] tracking-[-0.2px] 2xl:pr-10">
             Portfolio management with the power of AI
           </p>
         </div>
-        <div className="flex md:justify-start items-center  gap-6 md:flex-row flex-col justify-center text-center md:text-start  ">
-          <Image priority src={images?.trade} alt="" width={90} height={90} className='2xl:w-[80px] w-[60px]'/>
-          <p className="3xl:text-[18px] 2xl:text-[16px] text-[14px] text-[#162930] font-[100] leading-[26px] tracking-[-0.2px]  2xl:pr-10">
+        <div className="flex md:justify-start items-center  gap-4 md:flex-row flex-col justify-center text-center md:text-start  ">
+          <Image priority src={images?.trade} alt="" width={90} height={90} className='2xl:w-[80px] w-[70px]'/>
+          <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] leading-[26px] md:w-full w-[210px] tracking-[-0.2px]  2xl:pr-10">
             Trade like a pro with advanced tools
           </p>
         </div>
-        <div className="flex md:justify-start items-center  gap-6 md:flex-row flex-col justify-center text-center md:text-start  ">
-          <Image priority src={images?.money} alt="" width={90} height={90} className='2xl:w-[80px] w-[60px]'/>
-          <p className="3xl:text-[18px] 2xl:text-[16px] text-[14px] text-[#162930]  font-[100] leading-[26px] tracking-[-0.2px] 2xl:pr-10">
+        <div className="flex md:justify-start items-center  gap-4 md:flex-row flex-col justify-center text-center md:text-start  ">
+          <Image priority src={images?.money} alt="" width={90} height={90} className='2xl:w-[80px] w-[70px]'/>
+          <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] leading-[26px] tracking-[-0.2px] 2xl:pr-10 md:w-full w-[230px] ">
             Enjoy seamless money management
           </p>
         </div>{" "}
-        <div className="flex md:justify-start items-center gap-6 md:flex-row flex-col justify-center text-center md:text-start  ">
+        <div className="flex md:justify-start items-center gap-4 md:flex-row flex-col justify-center text-center md:text-start  ">
           <Image
             priority
             src={images?.security}
             alt=""
             width={90}
             height={90}
-            className='2xl:w-[80px] w-[60px]'
+            className='2xl:w-[80px] w-[70px]'
           />
-          <p className="3xl:text-[18px] 2xl:text-[16px] text-[14px] text-[#162930] font-[100] leading-[26px] tracking-[-0.2px]  2xl:pr-10">
+          <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] xl:w-[246px] 2xl:w-full md:w-full w-[230px] leading-[26px] tracking-[-0.2px]  2xl:pr-10">
             {" "}
             Count on robust security to protect your investments
           </p>
         </div>
         <div className="flex flex-col gap-1 items-center md:items-start">
-          <span className="text-[#000000B2] font-[100] text-[14px] 3xl:text-[18px] 2xl:text-[16px]">
+          <span className="text-[#000000B2] font-[200] xl:text-[18px] text-[16px]">
             Do you have questions?
           </span>
-          <p className="flex items-center gap-2 font-[600] 2xl:text-[14px] text-[12px] text-[#2EB200] cursor-pointer">
+          <p className="flex items-center gap-2 font-[600] xl:text-[16px] text-[14px] text-[#2EB200] cursor-pointer">
             Contact us <FaArrowRight />
           </p>
         </div>
       </div>
 
-      <div className="px-[5%] 2xl:px-0 lg:pt-[66px] pt-[64px] bg-white pb-[60px]  flex flex-col gap-10 max-w-[1340px] !mx-auto">
+      <div className="xl:px-0 px-[5%] 2xl:px-0 lg:pt-[66px] pt-[64px] bg-white pb-[60px] xl:w-[1236px] flex flex-col gap-10 max-w-[1440px] !mx-auto">
         <div
           className={` !bg-[#071A00] lg:py-[90px] lg:px-[50px] md:px-8 px-4 py-[40px] rounded-[16px] relative  overflow-hidden`}
         >
           <div className="2xl:w-[35%] xl:w-[40%] md:w-[50%] lg:pb-0 md:pb-[65%] pb-[230px]">
             <div className="flex justify-start items-start flex-col gap-4 pb-[25px] border-b border-[#3CE500] pr-10 ">
-              <p className="text-white lg:text-[36px] text-[28px] font-bold leading-[48px] tracking-[-1.38px] ">
+              <p className="text-white lg:text-[40px] text-[28px] font-bold md:leading-[48px] leading-[40px] tracking-[-1.38px] ">
                 Trading Global <br /> Securities
               </p>
-              <p className="text-white lg:text-[16px] text-[14px] font-[100] leading-[31px] tracking-[-0.24px] ">
+              <p className="text-white lg:text-[18px] text-[16px] font-[100] leading-[31px] tracking-[-0.24px] ">
                 Future-forward platform for trading US and global stocks,
                 options, bonds, mutual funds, commodities, and alternative
                 assets.
@@ -152,7 +153,7 @@ export default function Home() {
                   width={13}
                   height={13}
                 />
-                <p className="2xl:text-[18px] lg:text-[16px] text-[14px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
+                <p className="lg:text-[18px] text-[16px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
                   Notional & Fractional Trading
                 </p>
               </div>
@@ -165,7 +166,7 @@ export default function Home() {
                   width={13}
                   height={13}
                 />
-                <p className="2xl:text-[18px] lg:text-[16px] text-[14px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
+                <p className="lg:text-[18px] text-[16px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
                   Market, Limit, Stop Limit Orders
                 </p>
               </div>
@@ -178,7 +179,7 @@ export default function Home() {
                   width={13}
                   height={13}
                 />
-                <p className="2xl:text-[18px] lg:text-[16px] text-[14px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
+                <p className="lg:text-[18px] text-[16px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
                   Real-time Pricing
                 </p>
               </div>
@@ -191,7 +192,7 @@ export default function Home() {
                   width={13}
                   height={13}
                 />
-                <p className="2xl:text-[18px] lg:text-[16px] text-[14px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
+                <p className="lg:text-[18px] text-[16px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
                   Millisecond Latency
                 </p>
               </div>
@@ -210,12 +211,12 @@ export default function Home() {
         </div>
 
         <div className="bg-[#071A00] rounded-2xl lg:py-[50px] lg:px-[50px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row gap-8 lg:gap-0 flex-col items-center">
-          <div className="2xl:w-[35%] lg:w-[40%] pt-2 md:pt-0">
+          <div className="2xl:w-[35%] xl:w-[40%] md:w-[60%] pt-2 md:pt-0">
             <div className="flex justify-start items-start flex-col gap-4 pb-[25px] border-b border-[#3CE500] pr-5 ">
-              <p className="text-white lg:text-[36px] text-[28px] font-bold leading-[38px] tracking-[-1.38px] ">
+              <p className="text-white lg:text-[40px] text-[28px] font-bold leading-[38px] tracking-[-1.38px] ">
                 Moving Money
               </p>
-              <p className="text-white lg:text-[16px] text-[14px] font-[100] leading-[31px] tracking-[-0.24px] ">
+              <p className="text-white lg:text-[18px] text-[16px] font-[100] leading-[31px] tracking-[-0.24px] ">
                 Fund your trades and cash out effortlessly from anywhere in the
                 world, with foreign currency solutions that hedge your risks.
               </p>
@@ -230,7 +231,7 @@ export default function Home() {
                   width={13}
                   height={13}
                 />
-                <p className="2xl:text-[18px] lg:text-[16px] text-[14px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
+                <p className="lg:text-[18px] text-[16px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
                   Multi-currency Wallets
                 </p>
               </div>
@@ -243,7 +244,7 @@ export default function Home() {
                   width={13}
                   height={13}
                 />
-                <p className="2xl:text-[18px] lg:text-[16px] text-[14px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
+                <p className="lg:text-[18px] text-[16px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
                   Instant Deposits and Withdrawals
                 </p>
               </div>
@@ -256,7 +257,7 @@ export default function Home() {
                   width={13}
                   height={13}
                 />
-                <p className="2xl:text-[18px] lg:text-[16px] text-[14px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
+                <p className="lg:text-[18px] text-[16px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
                   Up to 4x Margin to Trade
                 </p>
               </div>
@@ -269,7 +270,7 @@ export default function Home() {
                   width={13}
                   height={13}
                 />
-                <p className="2xl:text-[18px] lg:text-[16px] text-[14px] font-[200] leading-[26px] tracking-[-0.2px] !text-white">
+                <p className="lg:text-[18px] text-[16px] font-[200] leading-[26px] tracking-[-0.2px] !text-white">
                   Settlement Support
                 </p>
               </div>
@@ -288,12 +289,12 @@ export default function Home() {
         </div>
 
         <div className="bg-[#071A00] w-full rounded-2xl 2xl:py-[100px] lg:py-[50px] lg:px-[40px] 2xl:px-[60px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row flex-col gap-8 lg:gap-0 items-center ">
-          <div className="2xl:w-[35%] lg:w-[38%] pt-2 md:pt-0">
+          <div className="2xl:w-[35%] xl:w-[40%] md:w-[60%] pt-2 md:pt-0">
             <div className="flex justify-start items-start flex-col gap-4 pb-[25px] border-b border-[#3CE500] pr-10 ">
-              <p className="text-white lg:text-[36px] text-[28px] font-bold leading-[38px] tracking-[-1.38px] ">
+              <p className="text-white lg:text-[40px] text-[28px] font-bold leading-[38px] tracking-[-1.38px] ">
                 The Power of AI
               </p>
-              <p className="text-white lg:text-[16px] text-[14px] font-[100] leading-[31px] tracking-[-0.24px] ">
+              <p className="text-white lg:text-[18px] text-[16px] font-[100] leading-[31px] tracking-[-0.24px] ">
                 Harness AI to analyze data, predict market trends, and automate
                 trading decisions for optimized returns and minimized risks.
               </p>
@@ -308,7 +309,7 @@ export default function Home() {
                   width={13}
                   height={13}
                 />
-                <p className="2xl:text-[18px] lg:text-[16px] text-[14px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
+                <p className="lg:text-[18px] text-[16px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
                   Tailored algorithm for smart decisions
                 </p>
               </div>
@@ -321,7 +322,7 @@ export default function Home() {
                   width={13}
                   height={13}
                 />
-                <p className="2xl:text-[18px] lg:text-[16px] text-[14px] font-[200] leading-[26px] tracking-[-0.2px] !text-white">
+                <p className="lg:text-[18px] text-[16px] font-[200] leading-[26px] tracking-[-0.2px] !text-white">
                   Automated Portfolio Optimization
                 </p>
               </div>
@@ -334,7 +335,7 @@ export default function Home() {
                   width={13}
                   height={13}
                 />
-                <p className="2xl:text-[18px] lg:text-[16px] text-[14px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
+                <p className="lg:text-[18px] text-[16px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
                   Predictive Market Analytics
                 </p>
               </div>
@@ -347,7 +348,7 @@ export default function Home() {
                   width={13}
                   height={13}
                 />
-                <p className="2xl:text-[18px] lg:text-[16px] text-[14px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
+                <p className="lg:text-[18px] text-[16px]font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
                   Intelligent Security Solutions
                 </p>
               </div>
@@ -367,9 +368,9 @@ export default function Home() {
       </div>
 
       <div className="bg-[#F9FAFB]">
-        <div className="lg:py-[50px] py-[64px] pb-[40px] px-[5%] 2xl:px-0 max-w-[1340px] !mx-auto">
+        <div className="lg:py-[50px] md:py-[64px] py-[44px] pb-[40px] px-[5%] xl:px-0 2xl:px-0 xl:w-[1240px] max-w-[1440px] !mx-auto">
 
-            <p className="lg:text-[38px] text-[28px] font-bold text-[#111216] text-center mb-[40px] lg:mb-[50px]">
+            <p className="lg:text-[38px] text-[32px] md:font-bold font-[400] text-[#111216] px-[3%] md:px-0 text-center mb-[40px] lg:mb-[50px]">
               Imagine you invested a year ago.
             </p>
             <div className="flex justify-between items-center  gap-8 mb-8  flex-col lg:flex-row">
@@ -410,13 +411,14 @@ export default function Home() {
                   onChange={onChange}
                   defaultValue={150}
                   value={inputValue}
+                  tooltipVisible={false}
                   step={10}
                   className="!w-full"
                   tooltip={{ formatter }}
                 />
                 <div className="flex justify-between items-center w-full">
                   <p className="text-[#00000099] lg:text-[16px] text-[14px] font-[200]  flex justify-start items-center text-start gap-[7px] ">
-                    Amount: <span className="text-black font-[600] ">$100</span>
+                    Amount: <span className="text-black font-[600] ">${inputValue}</span>
                   </p>
                   <p className="text-[#00000099] lg:text-[16px] text-[14px] font-[200]  flex justify-start items-center text-start gap-[7px] ">
                     Quantity :<span className="text-black font-[600] ">5.12</span>
@@ -426,12 +428,12 @@ export default function Home() {
             </div>
 
             <ChartComponent />
-            <div className="mt-6 flex justify-center items-center gap-[12px] flex-col">
+            <div className="md:mt-8 mt-10 flex justify-center items-center gap-[12px] flex-col">
               <p className="text-[#00000099] lg:text-[16px] text-[14px] font-[200] text-center">
                 You will have
               </p>
               <div className="justify-center items-center flex gap-[6px]  ">
-                <p className="text-[#000000] text-[32px] font-[600] ">$536.11</p>
+                <p className="text-[#000000] text-[36px] font-[400] ">$536.11</p>
                 <p className="text-[#2EB200] lg:text-[16px] text-[14px] font-[600] text-end ">
                   +436.11%
                 </p>
@@ -440,12 +442,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-white lg:py-[64px] py-[42px] px-[5%] 2xl:px-0 max-w-[1340px] !mx-auto">
+      <div className="bg-white lg:py-[64px] py-[42px] px-[5%] xl:px-0 xl:w-[1240px] 2xl:px-0 max-w-[1440px] !mx-auto">
         <div className="flex flex-col  gap-2 lg:mb-[64px] mb-[32px]">
-          <p className="lg:text-[32px] text-[28px] font-[400] tracking-[-0.82px] text-[#101828]">
+          <p className="lg:text-[36px] text-[28px] font-[400] tracking-[-0.82px] text-[#101828]">
             Also Coming Soon
           </p>
-          <p className="2xl:text-[18px] lg:text-[16px] text-[14px] font-[100] leading-[26px] tracking-[-0.2px] text-[#475467]">
+          <p className="lg:text-[18px] text-[16px] font-[100] leading-[26px] tracking-[-0.2px] text-[#475467]">
             Case studies from some of our amazing customers who are building
             faster.
           </p>
@@ -521,7 +523,7 @@ export default function Home() {
       </div>
 
       <div className="bg-[#F9FAFB]">
-        <div className="lg:py-[86px] py-[64px] px-[5%] 2xl:px-0 flex justify-between flex-col-reverse lg:flex-row gap-6 lg:gap-[64px] w-full max-w-[1340px] !mx-auto">
+        <div className="lg:py-[86px] py-[64px] px-[5%] 2xl:px-0 flex justify-between flex-col-reverse lg:flex-row gap-6 lg:gap-[64px] w-full xl:px-0 xl:w-[1240px] max-w-[1440px] !mx-auto">
           <div className="lg:w-[50%]">
             <Image
               priority
@@ -534,7 +536,7 @@ export default function Home() {
           </div>
 
           <div className="  lg:w-[50%] w-full ">
-            <p className="text-[#101828] lg:text-[30px] text-[22px] font-[400] 2xl:leading-[45px] md:leading-[38px] leading-[28px]"> 
+            <p className="text-[#101828] lg:text-[40px] text-[22px] font-[400] 2xl:leading-[45px] md:leading-[42px] leading-[28px]"> 
               There’s a brokerage account tailored to everyone
             </p>
 
@@ -543,7 +545,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[white] pt-[80px]  max-w-[1340px] !mx-auto">
+      <div className="bg-[white] md:pt-[80px] pt-[70px] xl:px-0 xl:w-[1240px] max-w-[1440px] !mx-auto">
         <div className="flex justify-center items-center mb-[64px] px-[5%]">
           <div className="flex flex-col justify-center items-center gap-3">
             <p className="text-[#101828] lg:text-[32px] text-[28px]  font-[600]">
@@ -564,7 +566,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="px-[5%]">
+        <div className="px-[5%] xl:px-0">
           <div className="w-full  ">
             <Image
               priority
@@ -577,13 +579,13 @@ export default function Home() {
       </div>
 
       <div className="bg-black">
-        <div className="py-[100px] px-[5%]  max-w-[1340px] !mx-auto">
-          <div className="flex justify-around items-center md:px-[6%] xl:px-[10%] 2xl:px-[8%] 3xl:px-[5%] 4xl:px-0 5xl:px-0 flex-col lg:flex-row lg:items-center gap-12 lg:gap-0">
+        <div className="py-[100px] px-[5%]  xl:px-0 xl:w-[1240px] max-w-[1440px] !mx-auto">
+          <div className="flex justify-around items-center md:px-[6%] flex-col lg:flex-row lg:items-center md:gap-12 gap-0 lg:gap-0">
             <div className="w-full flex flex-col justify-center items-center lg:justify-start lg:items-start">
-              <p className="lg:text-[37px] 2xl:text-[44px] text-[28px] font-semibold   w-full lg:leading-[45px] 2xl:leading-[55px] text-white text-center lg:text-start">
+              <p className="lg:text-[40px] 2xl:text-[44px] text-[32px] font-semibold   w-full lg:leading-[50px] 2xl:leading-[55px] leading-[40px] text-white text-center lg:text-start">
                 Join the GEN CAPITA <br /> Channel
               </p>
-              <div className="px-[15px] py-[20px] flex items-center justify-center md:h-[50px] h-[38px] bg-[white] cursor-pointer transform -skew-x-12 font-[200] rounded-md mt-8"
+              <div className="px-[15px] py-[20px] flex items-center justify-center md:h-[50px] h-[38px] bg-[white] cursor-pointer transform -skew-x-12 font-[200] rounded-md md:mt-8 mt-6"
                 onClick={()=> window.open('https://whatsapp.com/channel/0029ValKZe1HwXbFg0zDPj2F')}
               >
                 <span className="transform skew-x-12 md:text-[14px] text-[12px] text-black">
@@ -597,14 +599,15 @@ export default function Home() {
               priority
               src={images.phoneFrame}
               alt=""
-              width={380}
-              height={500}
+              width={20}
+              height={50}
+              className="xl:w-[520px] w-[380px] h-[500px]"
             />
           </div>
 
-          <div className="lg:my-[140px] my-[64px] lg:p-[64px] py-[56px] px-[16px]  bg-white rounded-[24px] flex flex-col justify-center items-center ">
-            <div className="lg:!w-[80%] xl:!w-[60%] !w-full  flex justify-center items-center flex-col gap-4 mb-5">
-              <p className="text-[#161616] text-center lg:text-[32px] text-[25px] font-bold lg:leading-[40px]  ">
+          <div className="lg:my-[140px] mt-[46px] lg:p-[64px] py-[56px] px-[16px]  bg-white rounded-[24px] flex flex-col justify-center items-center ">
+            <div className="lg:!w-[80%] xl:!w-[780px] !w-full  flex justify-center items-center flex-col gap-4 mb-5">
+              <p className="text-[#161616] text-center lg:text-[38px] text-[32px] md:font-[700] font-[400] lg:leading-[50px]  ">
                 GEN CAPITA is the next frontier of investment technology, helping
                 you unlock financial value.
               </p>
@@ -616,7 +619,7 @@ export default function Home() {
             <div className="flex md:flex-row flex-col justify-center items-center gap-1  w-full">
               <input
                 placeholder="Enter email address"
-                className="bg-[#F5F5F5] placeholder:font-[100] placeholder:text-[13px] !py-4 text-black focus:outline-none focus:border-none  transform -skew-x-12 rounded-md lg:w-[40%] w-full pl-8 "
+                className="bg-[#F5F5F5] placeholder:font-[100] placeholder:text-[13px] placeholder:transform placeholder:skew-x-12 !py-4 text-black focus:outline-none focus:border-none  transform -skew-x-12 rounded-md lg:w-[40%] w-full pl-8 "
               />
               <div
                 className="md:w-[140px] w-[120px] flex items-center justify-center  !py-4 mt-2 md:mt-0 bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md cursor-pointer"
@@ -632,7 +635,7 @@ export default function Home() {
       </div>
 
       <div className="bg-black">
-        <div className="lg:pb-[48px] pb-[64px] flex justify-between items-center px-[5%] flex-col lg:flex-row gap-8  max-w-[1340px] !mx-auto" id="WaitList">
+        <div className="lg:pb-[48px] pb-[64px] flex justify-between items-center px-[5%] flex-col lg:flex-row gap-8  max-w-[1440px] !mx-auto" id="WaitList">
           <div>
             <Image
               priority

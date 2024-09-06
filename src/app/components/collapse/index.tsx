@@ -45,7 +45,7 @@ const CollapseAccountDetails = ({
     <div className="w-full">
       <div className="w-full hidden md:block !transition !duration-[1000ms] !ease-in-out">
         {openedTabId === theObject?.id ? (
-          <div className="border border-[#F2F6FF] shadow-md p-4 rounded-2xl flex justify-between items-center   gap-4 ">
+          <div className="border border-[#F2F6FF] bg-[#FFFFFF] shadow-md p-4 rounded-2xl flex justify-between items-center gap-4 ">
             <div className="flex justify-start items-start gap-4 ">
               <Image src={theObject?.icon} alt="" width={40} height={40} />
               <div className="flex justify-start items-start flex-col gap-4">

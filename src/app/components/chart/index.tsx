@@ -84,6 +84,18 @@ const data = [
  
 // }));
 
+// Custom Tooltip component
+const CustomTooltip = ({ active, payload }: any) => {
+  if (active && payload && payload.length) {
+    return (
+      <div style={{ backgroundColor: "#fff", color:'#000000', fontSize:'15px', fontWeight:'600', border: "1px solid #ccc", padding: "5px" }}>
+        <p style={{ margin: 0 }}>{`$${payload[0].value}`}</p> {/* Display only the Y-axis value */}
+      </div>
+    );
+  }
+  return null;
+};
+
 
 
 const ChartComponent = () => {
@@ -102,11 +114,18 @@ const ChartComponent = () => {
           }}
           className="!text-[11px] 2xl:!text-[13px] font-[100]"
         >
-          <CartesianGrid strokeDasharray="1 6" />
-          <XAxis dataKey="name" axisLine={false} />
-          <YAxis className="" axisLine={false} />
-          <Tooltip  />
-          <Area type="monotone" dataKey="amount" stroke="#2EB200" fill="#2EB20026" />
+          <CartesianGrid strokeDasharray="13 6" vertical={false} stroke="#ededee" />
+            <defs>
+              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                 <stop offset="5%" stopColor="#2EB200" stopOpacity={0.1}/>
+                 <stop offset="95%" stopColor="#2EB200" stopOpacity={0}/>
+              </linearGradient>
+            </defs>
+          <XAxis dataKey="name" axisLine={false} tickLine={false} padding={{ left: 40, right: 0 }}/>
+          <YAxis className="" axisLine={false} tickLine={false} tickFormatter={(value) => `$${value}`} />
+          {/* <Tooltip formatter={(value) => [`$${value}`, '']}/> */}
+          <Tooltip content={<CustomTooltip />} />
+          <Area type="monotone" dataKey="amount" stroke="#2EB200" strokeWidth={2} fillOpacity={1} fill="url(#colorUv)"  />
         </AreaChart>
       </ResponsiveContainer>
     </div>
