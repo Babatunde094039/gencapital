@@ -17,6 +17,7 @@ import ChartComponent from "./components/chart";
 import Modals from "./components/modal";
 import WaitList from "./components/forms/WaitList";
 import Link from "next/link";
+import { OpenSauceSans } from "@/assets/font";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState(150);
@@ -50,7 +51,7 @@ export default function Home() {
         </div>
         <div className=" h-[771px] w-full bg-custom-gradient relative">
           <div className="flex flex-col items-center justify-center pt-16 px-[5%] 2xl:w-full xl:w-[883px] md:px-0 max-w-[1440px] !mx-auto">
-            <p className="font-[700] 3xl:text-[92px] xl:text-[82px] lg:text-[68px] text-[55px] text-center !text-[#FFFFFF] leading-[70px] md:leading-none">
+            <p className={`${OpenSauceSans.className} font-[700] 3xl:text-[92px] xl:text-[82px] lg:text-[68px] text-[55px] text-center !text-[#FFFFFF] leading-[70px] md:leading-none`}>
               Intelligent Investing
             </p>
             <p className="3xl:text-[24px] md:text-[22px] text-[18px] md:w-[48%] xl:w-[626px] w-full text-center font-[100] mt-6 !text-[#FFFFFF]">
