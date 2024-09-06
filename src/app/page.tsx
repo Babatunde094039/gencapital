@@ -579,7 +579,7 @@ export default function Home() {
       </div>
 
       <div className="bg-black">
-        <div className="py-[100px] px-[5%]  xl:px-0 xl:w-[1240px] max-w-[1440px] !mx-auto">
+        <div className="pt-[100px] md:pb-[20px] pb-[80px] px-[5%]  xl:px-0 xl:w-[1240px] max-w-[1440px] !mx-auto">
           <div className="flex justify-around items-center md:px-[6%] flex-col lg:flex-row lg:items-center md:gap-12 gap-0 lg:gap-0">
             <div className="w-full flex flex-col justify-center items-center lg:justify-start lg:items-start">
               <p className="lg:text-[40px] 2xl:text-[44px] text-[32px] font-semibold   w-full lg:leading-[50px] 2xl:leading-[55px] leading-[40px] text-white text-center lg:text-start">
