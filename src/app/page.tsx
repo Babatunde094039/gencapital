@@ -3,12 +3,9 @@ import { images } from "@/theme";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import test from "@/assets/stocksSection.svg";
-import CollapseAccountDetails from "./components/collapse";
 import ParentCollapse from "./components/collapse/parentCollapse";
 import {
-  Input,
   InputNumberProps,
-  Modal,
   Slider,
   SliderSingleProps,
 } from "antd";
