@@ -88,7 +88,7 @@ const data = [
 const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
     return (
-      <div style={{ backgroundColor: "#fff", color:'#000000', fontSize:'15px', fontWeight:'600', border: "1px solid #ccc", padding: "5px" }}>
+      <div style={{ backgroundColor: "#fff", color:'#000000', fontSize:'13px', fontWeight:'600', border: "1px solid #ccc", padding: "5px" }}>
         <p style={{ margin: 0 }}>{`$${payload[0].value}`}</p> {/* Display only the Y-axis value */}
       </div>
     );

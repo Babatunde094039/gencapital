@@ -66,7 +66,7 @@ export default function Home() {
             priority
             src={images.iPhone}
             alt="iphone"
-            className="absolute xl:-bottom-[40%] -bottom-[42%] xl:left-[39%] md:left-[34%] left-[8%] 2xl:left-[40.5%] 3xl:left-[42%]  4xl:left-[44.5%]  5xl:left-[46.5%] right-0"
+            className="absolute xl:mt-[28rem] md:mt-[26rem] mt-[29rem] inset-0 mx-auto"
           />
         </div>
 
