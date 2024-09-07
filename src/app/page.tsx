@@ -405,7 +405,7 @@ export default function Home() {
                 </p>
                 <Slider
                   min={100}
-                  max={2000}
+                  max={1000}
                   onChange={onChange}
                   defaultValue={150}
                   value={inputValue}
