@@ -11,7 +11,7 @@ import Sign from "@/assets/icons/sign.svg";
 import { images } from "@/theme";
 import { CustomInputProps } from "@/utils/interfaces";
 import { formValidationMsgs } from "@/utils/inputFieldsError";
-import { OpenSauceOne } from "@/assets/font";
+import { OpenSauceOne } from "@/utils/font";
 
 const CustomInput = ({
   handleOnBlur,

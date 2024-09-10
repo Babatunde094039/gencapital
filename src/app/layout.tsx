@@ -4,7 +4,7 @@ import "./globals.css";
 import { ConfigProvider } from "antd";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { antdTheme } from "@/theme";
-import { OpenSauceOne } from "@/assets/font";
+import { OpenSauceOne } from "@/utils/font";
 
 const inter = Inter({ subsets: ["latin"] });
 

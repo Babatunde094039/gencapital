@@ -14,7 +14,7 @@ import ChartComponent from "./components/chart";
 import Modals from "./components/modal";
 import WaitList from "./components/forms/WaitList";
 import Link from "next/link";
-import { OpenSauceSans } from "@/assets/font";
+import { OpenSauceSans } from "@/utils/font";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState(150);
@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <main className="bg-white">
-        <div className="bg-[#061A01] w-full md:h-[80px] h-[72px] flex items-center">
+        <div className="bg-[#061A01] w-full md:h-[80px] h-[72px] flex items-center fixed top-0 z-[100]">
           <div className="flex justify-between items-center bg-[#061A01] xl:w-[1280px] w-full h-[56px] xl:px-[32px] px-[8%] py-5 max-w-[1440px] !mx-auto">
             <Image
               priority
@@ -46,7 +46,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className=" h-[771px] w-full bg-custom-gradient relative">
+        <div className=" h-[771px] w-full bg-custom-gradient relative mt-[72px]">
           <div className="flex flex-col items-center justify-center pt-16 px-[5%] 2xl:w-full xl:w-[883px] md:px-0 max-w-[1440px] !mx-auto">
             <p className={`${OpenSauceSans.className} font-[700] 3xl:text-[92px] xl:text-[82px] lg:text-[68px] text-[55px] text-center !text-[#FFFFFF] leading-[70px] md:leading-none`}>
               Intelligent Investing
@@ -74,7 +74,7 @@ export default function Home() {
         <div className="flex md:justify-start items-center  gap-4 md:flex-row flex-col justify-center text-center md:text-start ">
           <Image priority src={images?.buysell} alt="" width={90} height={90} className='2xl:w-[80px] w-[70px]'/>
           <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] leading-[26px] tracking-[-0.2px] xl:w-[226px] 2xl:w-full md:w-full w-[230px]  2xl:pr-10">
-            Buy/Sell the world’s most sought assets
+            Buy/Sell global assets
           </p>
         </div>
         <div className="flex md:justify-start items-center  gap-4 md:flex-row flex-col justify-center text-center md:text-start  ">
@@ -87,19 +87,19 @@ export default function Home() {
             className='2xl:w-[80px] w-[70px]'
           />
           <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] leading-[26px] xl:w-[246px] 2xl:w-full md:w-full w-[210px] tracking-[-0.2px] 2xl:pr-10">
-            Portfolio management with the power of AI
+            Portfolio Management AI
           </p>
         </div>
         <div className="flex md:justify-start items-center  gap-4 md:flex-row flex-col justify-center text-center md:text-start  ">
           <Image priority src={images?.trade} alt="" width={90} height={90} className='2xl:w-[80px] w-[70px]'/>
           <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] leading-[26px]  xl:w-[246px] 2xl:w-full md:w-full w-[210px] tracking-[-0.2px]  2xl:pr-10">
-            Trade like a pro with advanced tools
+            Trade with advanced tools
           </p>
         </div>
         <div className="flex md:justify-start items-center  gap-4 md:flex-row flex-col justify-center text-center md:text-start  ">
           <Image priority src={images?.money} alt="" width={90} height={90} className='2xl:w-[80px] w-[70px]'/>
-          <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] leading-[26px] tracking-[-0.2px] 2xl:pr-10 md:w-full w-[230px] ">
-            Enjoy seamless money management
+          <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] leading-[26px] tracking-[-0.2px] 2xl:pr-10 md:w-[65%] w-[230px] ">
+            Seamless money management
           </p>
         </div>{" "}
         <div className="flex md:justify-start items-center gap-4 md:flex-row flex-col justify-center text-center md:text-start  ">
@@ -113,12 +113,12 @@ export default function Home() {
           />
           <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] xl:w-[246px] 2xl:w-full md:w-full w-[230px] leading-[26px] tracking-[-0.2px]  2xl:pr-10">
             {" "}
-            Count on robust security to protect your investments
+            Robust security and protection
           </p>
         </div>
         <div className="flex flex-col gap-1 items-center md:items-start">
           <span className="text-[#000000B2] font-[200] xl:text-[18px] text-[16px]">
-            Do you have questions?
+            Have questions?
           </span>
           <p className="flex items-center gap-2 font-[600] xl:text-[16px] text-[14px] text-[#2EB200] cursor-pointer">
             Contact us <FaArrowRight />
@@ -126,19 +126,15 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="xl:px-0 px-[5%] 2xl:px-0 lg:pt-[66px] pt-[64px] bg-white pb-[60px] xl:w-[1236px] flex flex-col gap-10 max-w-[1440px] !mx-auto">
-        <div
-          className={` !bg-[#071A00] lg:py-[90px] lg:px-[50px] md:px-8 px-4 py-[40px] rounded-[16px] relative  overflow-hidden`}
-        >
+      <div className="xl:px-0 px-[5%] 2xl:px-0 lg:pt-[66px] pt-[64px] bg-white pb-[60px] xl:w-[1236px] flex flex-col relative transition duration-1000 ease-in-out gap-10 max-w-[1440px] !mx-auto">
+        <div className={` bg-[#071A00] lg:py-[90px] lg:px-[50px] md:px-8 px-4 py-[40px] rounded-[16px] sticky top-[125px] overflow-hidden`}>
           <div className="2xl:w-[35%] xl:w-[40%] md:w-[50%] lg:pb-0 md:pb-[65%] pb-[230px]">
             <div className="flex justify-start items-start flex-col gap-4 pb-[25px] border-b border-[#3CE500] pr-10 ">
               <p className="text-white lg:text-[40px] text-[28px] font-bold md:leading-[48px] leading-[40px] tracking-[-1.38px] ">
                 Trading Global <br /> Securities
               </p>
               <p className="text-white lg:text-[18px] text-[16px] font-[100] leading-[31px] tracking-[-0.24px] ">
-                Future-forward platform for trading US and global stocks,
-                options, bonds, mutual funds, commodities, and alternative
-                assets.
+              US and global stocks, bonds, mutual funds, commodities, etc.
               </p>
             </div>
 
@@ -208,15 +204,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-[#071A00] rounded-2xl lg:py-[50px] lg:px-[50px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row gap-8 lg:gap-0 flex-col items-center">
+        <div className="bg-[#071A00] rounded-2xl lg:py-[50px] lg:px-[50px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row gap-8 lg:gap-0 flex-col items-center sticky top-[180px]">
           <div className="2xl:w-[35%] xl:w-[40%] md:w-[60%] pt-2 md:pt-0">
             <div className="flex justify-start items-start flex-col gap-4 pb-[25px] border-b border-[#3CE500] pr-5 ">
               <p className="text-white lg:text-[40px] text-[28px] font-bold leading-[38px] tracking-[-1.38px] ">
                 Moving Money
               </p>
               <p className="text-white lg:text-[18px] text-[16px] font-[100] leading-[31px] tracking-[-0.24px] ">
-                Fund your trades and cash out effortlessly from anywhere in the
-                world, with foreign currency solutions that hedge your risks.
+                 Deposit, convert, and withdraw from anywhere globally.
               </p>
             </div>
 
@@ -286,15 +281,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-[#071A00] w-full rounded-2xl 2xl:py-[100px] lg:py-[50px] lg:px-[40px] 2xl:px-[60px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row flex-col gap-8 lg:gap-0 items-center ">
+        <div className="bg-[#071A00] w-full rounded-2xl 2xl:py-[100px] lg:py-[50px] lg:px-[40px] 2xl:px-[60px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row flex-col gap-8 lg:gap-0 items-center sticky top-[150px] ">
           <div className="2xl:w-[35%] xl:w-[40%] md:w-[60%] pt-2 md:pt-0">
             <div className="flex justify-start items-start flex-col gap-4 pb-[25px] border-b border-[#3CE500] pr-10 ">
               <p className="text-white lg:text-[40px] text-[28px] font-bold leading-[38px] tracking-[-1.38px] ">
                 The Power of AI
               </p>
               <p className="text-white lg:text-[18px] text-[16px] font-[100] leading-[31px] tracking-[-0.24px] ">
-                Harness AI to analyze data, predict market trends, and automate
-                trading decisions for optimized returns and minimized risks.
+                Analyze data, predict market trends, and automate trading.
               </p>
             </div>
 
@@ -365,7 +359,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#F9FAFB]">
+      {/* <div className="bg-[#F9FAFB]">
         <div className="lg:py-[50px] md:py-[64px] py-[44px] pb-[40px] px-[5%] xl:px-0 2xl:px-0 xl:w-[1240px] max-w-[1440px] !mx-auto">
 
             <p className="lg:text-[38px] text-[32px] md:font-bold font-[400] text-[#111216] px-[3%] md:px-0 text-center mb-[40px] lg:mb-[50px]">
@@ -438,7 +432,7 @@ export default function Home() {
               </div>
             </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="bg-white lg:py-[64px] py-[42px] px-[5%] xl:px-0 xl:w-[1240px] 2xl:px-0 max-w-[1440px] !mx-auto">
         <div className="flex flex-col  gap-2 lg:mb-[64px] mb-[32px]">
@@ -605,9 +599,8 @@ export default function Home() {
 
           <div className="lg:my-[140px] mt-[46px] lg:p-[64px] py-[56px] px-[16px]  bg-white rounded-[24px] flex flex-col justify-center items-center ">
             <div className="lg:!w-[80%] xl:!w-[780px] !w-full  flex justify-center items-center flex-col gap-4 mb-5">
-              <p className="text-[#161616] text-center lg:text-[38px] text-[32px] md:font-[700] font-[400] lg:leading-[50px]  ">
-                GEN CAPITA is the next frontier of investment technology, helping
-                you unlock financial value.
+              <p className="text-[#161616] text-center lg:text-[40px] text-[32px] md:font-[700] font-[400] lg:leading-[50px]  ">
+                Take Charge. Invest Intelligently.
               </p>
               <p className="text-[#161616] text-center lg:text-[18px] text-[16px] font-[100] leading-[31px]  ">
                 Sign up now and stay ahead of the curve.
@@ -628,6 +621,14 @@ export default function Home() {
                 </span>
               </div>
             </div>
+
+            <div className="lg:w-[80%] xl:w-[600px] w-full flex item-center justify-center xl:justify-start gap-2 mt-2">
+              <Image src={images.infoCircle} alt="" />
+                <p className="text-[#00000080] text-[12px] font-[100] leading-[16px]">
+                  Waitlist members agree to receiving amazing emails and updates.
+                </p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -642,12 +643,13 @@ export default function Home() {
               width={148}
               height={19}
             />
-            <p className="mt-[10px] text-white font-[100] text-[14px]">
+            <p className="mt-[10px] text-white font-[100] text-[13px]">
               Take Charge.
             </p>
           </div>
 
-          <div className="flex justify-end items-end gap-6 cursor-pointer">
+          <div className="flex flex-col justify-end items-end ">
+            <div className="flex justify-end items-end gap-4 cursor-pointer">
             <Image
               priority
               src={images?.faceBook}
@@ -671,6 +673,10 @@ export default function Home() {
               width={20}
               height={20}
             />
+            </div>
+            <p className="mt-[10px] text-white font-[100] text-[13px]">
+              © Copyright Gen Capita {new Date().getFullYear()}.
+            </p>
           </div>
         </div>
       </div>

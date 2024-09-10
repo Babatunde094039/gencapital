@@ -1,9 +1,9 @@
 export const images = {
   genCapitaLogo : require('@/assets/icons/gencapitaLogo.svg'),
   iPhone : require('@/assets/icons/iPhone.svg'),
-  buysell : require('@/assets/icons/buysell.gif.svg'),
+  buysell : require('@/assets/icons/buysell.svg'),
   portfolio : require('@/assets/icons/portfolio.svg'),
-  trade : require('@/assets/icons/trade.gif.svg'),
+  trade : require('@/assets/icons/trade.svg'),
   money : require('@/assets/icons/money.svg'),
   security : require('@/assets/icons/security.svg'),
   listIcon : require('@/assets/icons/listIcon.svg'),
