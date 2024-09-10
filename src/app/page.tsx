@@ -52,8 +52,7 @@ export default function Home() {
               Intelligent Investing
             </p>
             <p className="3xl:text-[24px] md:text-[22px] text-[18px] md:w-[48%] xl:w-[626px] w-full text-center font-[100] mt-6 !text-[#FFFFFF]">
-              GEN CAPITA empowers investors at every experience level to build
-              wealth through global securities.
+              Connecting investors to global securities.
             </p>
             <Link href={'#WaitList'} className="2xl:w-[155px] w-[140px] mt-8 flex items-center justify-center 2xl:h-[55px] h-[50px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
               <span className="transform skew-x-12 2xl:text-[16px] text-[15px] !text-white">
