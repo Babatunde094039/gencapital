@@ -573,8 +573,8 @@ export default function Home() {
         <div className="pt-[100px] md:pb-[20px] pb-[80px] px-[5%]  xl:px-0 xl:w-[1240px] max-w-[1440px] !mx-auto">
           <div className="flex justify-around items-center md:px-[6%] flex-col lg:flex-row lg:items-center md:gap-12 gap-0 lg:gap-0">
             <div className="w-full flex flex-col justify-center items-center lg:justify-start lg:items-start">
-              <p className="lg:text-[40px] 2xl:text-[44px] text-[32px] font-semibold   w-full lg:leading-[50px] 2xl:leading-[55px] leading-[40px] text-white text-center lg:text-start">
-                Join the GEN CAPITA <br /> Channel
+              <p className="lg:text-[40px] 2xl:text-[44px] text-[30px] font-semibold md:px-0 px-4 w-full lg:leading-[50px] 2xl:leading-[55px] leading-[40px] text-white text-center lg:text-start">
+                Join the Gen Capita <br /> Channel
               </p>
               <div className="px-[15px] py-[20px] flex items-center justify-center md:h-[50px] h-[38px] bg-[white] cursor-pointer transform -skew-x-12 font-[200] rounded-md md:mt-8 mt-6"
                 onClick={()=> window.open('https://whatsapp.com/channel/0029ValKZe1HwXbFg0zDPj2F')}
@@ -592,7 +592,7 @@ export default function Home() {
               alt=""
               width={20}
               height={50}
-              className="xl:w-[520px] w-[380px] h-[500px]"
+              className="xl:w-[520px] md:w-[380px] w-full object-cover mt-[90px] md:mt-0 mb-[60px] md:mb-0 md:object-contain h-[500px]"
             />
           </div>
 
@@ -601,7 +601,7 @@ export default function Home() {
               <p className="text-[#161616] text-center lg:text-[40px] text-[32px] md:font-[700] font-[400] lg:leading-[50px]  ">
                 Take Charge. Invest Intelligently.
               </p>
-              <p className="text-[#161616] text-center lg:text-[18px] text-[16px] font-[100] leading-[31px]  ">
+              <p className="text-[#161616] text-center lg:text-[18px] text-[16px] w-[60%] md:w-full font-[100] leading-[31px]  ">
                 Sign up now and stay ahead of the curve.
               </p>
             </div>
@@ -611,6 +611,13 @@ export default function Home() {
                 placeholder="Enter email address"
                 className="bg-[#F5F5F5] placeholder:font-[100] placeholder:text-[13px] placeholder:transform placeholder:skew-x-12 !py-4 text-black focus:outline-none focus:border-none  transform -skew-x-12 rounded-md lg:w-[40%] w-full pl-8 "
               />
+
+            <div className="lg:w-[80%] xl:w-[600px] w-full flex item-center md:hidden justify-center xl:justify-start gap-2 mt-2 mb-5">
+              <Image src={images.infoCircle} alt="" />
+                <p className="text-[#00000080] text-[12px] font-[100] leading-[16px]">
+                  Waitlist members agree to receiving amazing emails and updates.
+                </p>
+            </div>
               <div
                 className="md:w-[140px] w-[120px] flex items-center justify-center  !py-4 mt-2 md:mt-0 bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md cursor-pointer"
                 // onClick={() => setIsWaitListModalOpen(true)}
@@ -621,7 +628,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:w-[80%] xl:w-[600px] w-full flex item-center justify-center xl:justify-start gap-2 mt-2">
+            <div className="lg:w-[80%] xl:w-[600px] w-full md:flex item-center hidden justify-center xl:justify-start gap-2 mt-2">
               <Image src={images.infoCircle} alt="" />
                 <p className="text-[#00000080] text-[12px] font-[100] leading-[16px]">
                   Waitlist members agree to receiving amazing emails and updates.
@@ -634,7 +641,7 @@ export default function Home() {
 
       <div className="bg-black">
         <div className="lg:pb-[48px] pb-[64px] flex justify-between items-center px-[5%] flex-col lg:flex-row gap-8  max-w-[1440px] !mx-auto" id="WaitList">
-          <div>
+          <div className="flex flex-col items-center lg:items-start">
             <Image
               priority
               src={images?.genCapitaLogo}
