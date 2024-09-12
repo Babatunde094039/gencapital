@@ -30,8 +30,6 @@ export default function Home() {
     value
   ) => `$${value}`;
 
-  console.log('maxWidth', maxWidth)
-
   return (
     <main className="bg-white">
         <div className="bg-[#061A01] w-full md:h-[80px] h-[72px] flex items-center fixed top-0 z-[100]">
@@ -643,7 +641,7 @@ export default function Home() {
       </div>
 
       <div className="bg-black">
-        <div className={`lg:pb-[48px] pb-[64px] flex justify-between items-center px-[5%] flex-col lg:flex-row gap-8  max-w-[${maxWidth}] !mx-auto`} id="WaitList">
+        <div className={`lg:pb-[48px] pb-[64px] flex justify-between items-center px-[5%] flex-col lg:flex-row gap-8  max-w-[1440px] !mx-auto`} id="WaitList">
           <div className="flex flex-col items-center lg:items-start">
             <Image
               priority
