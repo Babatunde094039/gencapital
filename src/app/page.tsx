@@ -15,6 +15,7 @@ import Modals from "./components/modal";
 import WaitList from "./components/forms/WaitList";
 import Link from "next/link";
 import { OpenSauceSans } from "@/utils/font";
+import { maxWidth } from "@/helpers";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState(150);
@@ -29,10 +30,12 @@ export default function Home() {
     value
   ) => `$${value}`;
 
+  console.log('maxWidth', maxWidth)
+
   return (
     <main className="bg-white">
         <div className="bg-[#061A01] w-full md:h-[80px] h-[72px] flex items-center fixed top-0 z-[100]">
-          <div className="flex justify-between items-center bg-[#061A01] xl:w-[1280px] w-full h-[56px] xl:px-[32px] px-[8%] py-5 max-w-[1440px] !mx-auto">
+          <div className={`flex justify-between items-center bg-[#061A01] xl:w-[1280px] w-full h-[56px] xl:px-[32px] px-[8%] py-5 max-w-[${maxWidth}] !mx-auto`}>
             <Image
               priority
               src={images.genCapitaLogo}
@@ -47,7 +50,7 @@ export default function Home() {
           </div>
         </div>
         <div className=" h-[771px] w-full bg-custom-gradient relative mt-[72px]">
-          <div className="flex flex-col items-center justify-center pt-16 px-[5%] 2xl:w-full xl:w-[883px] md:px-0 max-w-[1440px] !mx-auto">
+          <div className={`flex flex-col items-center justify-center pt-16 px-[5%] 2xl:w-full xl:w-[883px] md:px-0 max-w-[${maxWidth}] !mx-auto`}>
             <p className={`${OpenSauceSans.className} font-[700] 3xl:text-[92px] xl:text-[82px] lg:text-[68px] text-[55px] text-center !text-[#FFFFFF] leading-[70px] md:leading-none`}>
               Intelligent Investing
             </p>
@@ -69,7 +72,7 @@ export default function Home() {
           />
         </div>
 
-      <div className="bg-white lg:gap-8 md:mt-[400px] mt-[430px] px-[5%] xl:px-0 xl:w-[1240px] 2xl:px-0 pb-[50px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  justify-between items-center md:gap-y-[80px] gap-y-[32px] max-w-[1440px] !mx-auto">
+      <div className={`bg-white lg:gap-8 md:mt-[400px] mt-[430px] px-[5%] xl:px-0 xl:w-[1240px] 2xl:px-0 pb-[50px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  justify-between items-center md:gap-y-[80px] gap-y-[32px] max-w-[${maxWidth}] !mx-auto`}>
         <div className="flex md:justify-start items-center  gap-4 md:flex-row flex-col justify-center text-center md:text-start ">
           <Image priority src={images?.buysell} alt="" width={90} height={90} className='2xl:w-[80px] w-[70px]'/>
           <p className="xl:text-[18px] text-[16px] text-[#162930] font-[200] leading-[26px] tracking-[-0.2px] xl:w-[226px] 2xl:w-full md:w-full w-[230px]  2xl:pr-10">
@@ -125,7 +128,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="xl:px-0 px-[5%] 2xl:px-0 lg:pt-[66px] pt-[64px] bg-white pb-[60px] xl:w-[1236px] flex flex-col relative transition duration-1000 ease-in-out gap-10 max-w-[1440px] !mx-auto">
+      <div className={`xl:px-0 px-[5%] 2xl:px-0 lg:pt-[66px] pt-[64px] bg-white pb-[60px] xl:w-[1236px] flex flex-col relative transition duration-1000 ease-in-out gap-10 max-w-[${maxWidth}] !mx-auto`}>
         <div className={` bg-[#071A00] lg:py-[90px] lg:px-[50px] md:px-8 px-4 py-[40px] rounded-[16px] sticky top-[125px] overflow-hidden`}>
           <div className="2xl:w-[35%] xl:w-[40%] md:w-[50%] lg:pb-0 md:pb-[65%] pb-[230px]">
             <div className="flex justify-start items-start flex-col gap-4 pb-[25px] border-b border-[#3CE500] pr-10 ">
@@ -359,7 +362,7 @@ export default function Home() {
       </div>
 
       {/* <div className="bg-[#F9FAFB]">
-        <div className="lg:py-[50px] md:py-[64px] py-[44px] pb-[40px] px-[5%] xl:px-0 2xl:px-0 xl:w-[1240px] max-w-[1440px] !mx-auto">
+        <div className={`lg:py-[50px] md:py-[64px] py-[44px] pb-[40px] px-[5%] xl:px-0 2xl:px-0 xl:w-[1240px] max-w-[${maxWidth}] !mx-auto`}>
 
             <p className="lg:text-[38px] text-[32px] md:font-bold font-[400] text-[#111216] px-[3%] md:px-0 text-center mb-[40px] lg:mb-[50px]">
               Imagine you invested a year ago.
@@ -433,7 +436,7 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div className="bg-white lg:py-[64px] py-[42px] px-[5%] xl:px-0 xl:w-[1240px] 2xl:px-0 max-w-[1440px] !mx-auto">
+      <div className={`bg-white lg:py-[64px] py-[42px] px-[5%] xl:px-0 xl:w-[1240px] 2xl:px-0 max-w-[${maxWidth}] !mx-auto`}>
         <div className="flex flex-col  gap-2 lg:mb-[64px] mb-[32px]">
           <p className="lg:text-[36px] text-[28px] font-[400] tracking-[-0.82px] text-[#101828]">
             Also Coming Soon
@@ -514,7 +517,7 @@ export default function Home() {
       </div>
 
       <div className="bg-[#F9FAFB]">
-        <div className="lg:py-[86px] py-[64px] px-[5%] 2xl:px-0 flex justify-between flex-col-reverse lg:flex-row gap-6 lg:gap-[64px] w-full xl:px-0 xl:w-[1240px] max-w-[1440px] !mx-auto">
+        <div className={`lg:py-[86px] py-[64px] px-[5%] 2xl:px-0 flex justify-between flex-col-reverse lg:flex-row gap-6 lg:gap-[64px] w-full xl:px-0 xl:w-[1240px] max-w-[${maxWidth}] !mx-auto`}>
           <div className="lg:w-[50%]">
             <Image
               priority
@@ -536,7 +539,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[white] md:pt-[80px] pt-[70px] xl:px-0 xl:w-[1240px] max-w-[1440px] !mx-auto">
+      <div className={`bg-[white] md:pt-[80px] pt-[70px] xl:px-0 xl:w-[1240px] max-w-[${maxWidth}] !mx-auto`}>
         <div className="flex justify-center items-center mb-[64px] px-[5%]">
           <div className="flex flex-col justify-center items-center gap-3">
             <p className="text-[#101828] lg:text-[32px] text-[28px]  font-[600]">
@@ -544,7 +547,7 @@ export default function Home() {
             </p>
 
             <p className="text-[#475467] lg:text-[16px] text-[14px] leading-[28px]  font-[100]  lg:w-[55%] text-center">
-              Brokers, asset managers, and fintechs can leverage GEN CAPITA's
+              Brokers, asset managers, and fintechs can leverage Gen Capita's
               power to provide clients access to global securities and
               investment tools.
             </p>
@@ -570,7 +573,7 @@ export default function Home() {
       </div>
 
       <div className="bg-black">
-        <div className="pt-[100px] md:pb-[20px] pb-[80px] px-[5%]  xl:px-0 xl:w-[1240px] max-w-[1440px] !mx-auto">
+        <div className={`pt-[100px] md:pb-[20px] pb-[80px] px-[5%]  xl:px-0 xl:w-[1240px] max-w-[${maxWidth}] !mx-auto`}>
           <div className="flex justify-around items-center md:px-[6%] flex-col lg:flex-row lg:items-center md:gap-12 gap-0 lg:gap-0">
             <div className="w-full flex flex-col justify-center items-center lg:justify-start lg:items-start">
               <p className="lg:text-[40px] 2xl:text-[44px] text-[30px] font-semibold md:px-0 px-4 w-full lg:leading-[50px] 2xl:leading-[55px] leading-[40px] text-white text-center lg:text-start">
@@ -640,7 +643,7 @@ export default function Home() {
       </div>
 
       <div className="bg-black">
-        <div className="lg:pb-[48px] pb-[64px] flex justify-between items-center px-[5%] flex-col lg:flex-row gap-8  max-w-[1440px] !mx-auto" id="WaitList">
+        <div className={`lg:pb-[48px] pb-[64px] flex justify-between items-center px-[5%] flex-col lg:flex-row gap-8  max-w-[${maxWidth}] !mx-auto`} id="WaitList">
           <div className="flex flex-col items-center lg:items-start">
             <Image
               priority
