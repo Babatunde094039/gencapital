@@ -67,7 +67,7 @@ export default function Home() {
           </div>
 
           <Image
-            priority
+            // priority
             src={images.iPhone}
             alt="iphone"
             width={20}
