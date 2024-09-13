@@ -1,6 +1,7 @@
 import { images } from "@/theme";
 import { Progress } from "antd";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useCallback, useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -56,9 +57,9 @@ const CollapseAccountDetails = ({
                   {theObject?.subcopy}
                 </p>
                 <div className="flex justify-start items-center gap-1 cursor-pointer">
-                  <p className="text-[13px] font-[600] text-[#2EB200]">
+                  <Link href={'#WaitList'} className="text-[13px] font-[600] text-[#2EB200]">
                     Join the Waitlist
-                  </p>
+                  </Link>
                   <FaArrowRight className="text-[#2EB200]" />
                 </div>
               </div>
@@ -112,9 +113,9 @@ const CollapseAccountDetails = ({
               {theObject?.subcopy}
             </p>
             <div className="flex justify-start items-center gap-1 cursor-pointer">
-              <p className="text-[12px] font-[200] text-[#2EB200]">
+              <Link href={'#WaitList'} className="text-[12px] font-[200] text-[#2EB200]">
                 Join the Waitlist
-              </p>
+              </Link>
               <FaArrowRight className="text-[#2EB200]" />
             </div>
           </div>

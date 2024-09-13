@@ -16,11 +16,15 @@ import WaitList from "./components/forms/WaitList";
 import Link from "next/link";
 import { OpenSauceSans } from "@/utils/font";
 import { maxWidth } from "@/helpers";
+import EmailListSuccess from "./components/forms/EmailListSuccess";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState(150);
   const [isWaitListModalOpen, setIsWaitListModalOpen] = useState(false);
+  const [isEmailListModalOpen, setIsEmailListModalOpen] = useState(false);
   const [steps, setSteps] = useState(1);
+  const [emailStep, setEmailStep] = useState(2);
+  const [emailInput, setEmailInput] = useState('')
 
   const onChange: InputNumberProps["onChange"] = (newValue) => {
     setInputValue(newValue as number);
@@ -123,7 +127,9 @@ export default function Home() {
           <span className="text-[#000000B2] font-[200] xl:text-[18px] text-[16px]">
             Have questions?
           </span>
-          <p className="flex items-center gap-2 font-[600] xl:text-[16px] text-[14px] text-[#2EB200] cursor-pointer">
+          <p className="flex items-center gap-2 font-[600] xl:text-[16px] text-[14px] text-[#2EB200] cursor-pointer"
+             onClick={() => setIsWaitListModalOpen(true)}
+          >
             Contact us <FaArrowRight />
           </p>
         </div>
@@ -614,19 +620,22 @@ export default function Home() {
               <div className="lg:w-[40%] w-full transform -skew-x-12 bg-[#F5F5F5]">
                 <input
                   placeholder="Enter email address"
-                  className="bg-transparent placeholder:font-[100] placeholder:text-[13px] !py-4 text-black transform skew-x-12 focus:outline-none focus:border-none rounded-md w-full pl-8 "
+                  onChange={(e)=> setEmailInput(e.target.value)}
+                  className="bg-transparent placeholder:font-[100] placeholder:text-[13px] !py-4 text-black font-[100] transform skew-x-12 focus:outline-none focus:border-none rounded-md w-full pl-8 "
                 />
               </div>
 
               <div className="lg:w-[80%] xl:w-[600px] w-full flex item-center md:hidden justify-center xl:justify-start gap-2 mt-2 mb-5">
                 <Image src={images.infoCircle} alt="" />
                   <p className="text-[#00000080] text-[12px] font-[100] leading-[16px]">
-                    Waitlist members agree to receiving amazing emails and updates.
+                    Waitlist members agree to receiving emails and updates.
                   </p>
               </div>
               <div
-                className="md:w-[140px] w-[120px] flex items-center justify-center !py-4 mt-2 md:mt-0 bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md cursor-pointer"
-                // onClick={() => setIsWaitListModalOpen(true)}
+                className={`md:w-[140px] w-[120px] flex items-center justify-center !py-4 mt-2 md:mt-0 ${emailInput ? 'cursor-pointer' : 'cursor-not-allowed'} bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md `}
+                onClick={() =>{ 
+                  if(emailInput) return setIsEmailListModalOpen(true)
+                }}
               >
                 <span className="transform skew-x-12 md:text-[14px] text-white text-[12px] font-[200]">
                   Join Waitlist
@@ -664,26 +673,17 @@ export default function Home() {
             <div className="flex justify-end items-end gap-4 cursor-pointer">
             <Image
               priority
-              src={images?.faceBook}
-              alt=""
-              width={20}
-              height={20}
-            />
-            <Image
-              priority
               src={images?.whatsapp}
               alt=""
               width={20}
               height={20}
+              onClick={()=> window.open('https://whatsapp.com/channel/0029ValKZe1HwXbFg0zDPj2F')}
             />
-            <Image priority src={images?.Insta} alt="" width={20} height={20} />
-            <Image priority src={images?.twitter} alt="" width={20} height={20} />
-            <Image
-              priority
-              src={images?.linkedIn}
-              alt=""
-              width={20}
-              height={20}
+            <Image priority src={images?.Insta} alt="" width={20} height={20} 
+             onClick={()=> window.open('https://www.instagram.com/gencapita/')}
+            />
+            <Image priority src={images?.twitter} alt="" width={20} height={20} 
+             onClick={()=> window.open('https://x.com/gencapita')}
             />
             </div>
             <p className="mt-[10px] text-white font-[100] text-[13px]">
@@ -702,6 +702,16 @@ export default function Home() {
           steps={steps}
           setSteps={setSteps}
           setOpen={setIsWaitListModalOpen}
+        />
+      </Modals>
+
+      <Modals
+        open={isEmailListModalOpen}
+        setOpen={setIsEmailListModalOpen}
+        step={emailStep}
+      >
+        <EmailListSuccess
+          setOpen={setIsEmailListModalOpen}
         />
       </Modals>
     </main>

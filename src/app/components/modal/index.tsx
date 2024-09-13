@@ -25,7 +25,7 @@ const Modals = ({ children, open, setOpen, step }: Props) => {
         closable={false}
         destroyOnClose
         keyboard
-        className={` ${step === 2 ? 'lg:w-[30%] w-[90%]' : 'lg:!w-[50%] w-[90%]'}  `}
+        className={` ${step === 2 ? 'lg:!w-[30%] w-[90%]' : 'lg:!w-[50%] w-[90%]'}  `}
 >
         {children}
       </Modal>

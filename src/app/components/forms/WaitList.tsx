@@ -116,7 +116,7 @@ const WaitList = ({
             <div className="flex justify-start items-center gap-1 ">
               <Image src={images.infoCircle} alt="" />
               <p className="text-[#00000080] text-[12px] font-[400] leading-[16px]">
-                Waitlist members agree to receiving amazing emails and updates.
+                Waitlist members agree to receiving emails and updates.
               </p>
             </div>
           </Form>
@@ -144,10 +144,10 @@ const WaitList = ({
           />
           <div className="flex justify-center items-center flex-col mt-6">
             <p className="text-start text-[18px] text-[#101828] font-[600]">
-              You're on the List!
+              Message Sent!
             </p>
             <p className="text-start text-[14px] text-[#475467] font-[400] mt-1">
-              Thank you for joining.
+               We will be in touch.
             </p>
           </div>
 
