@@ -40,7 +40,7 @@ const WaitList = ({
               Contact Sales
             </p>
             <p className="text-start text-[14px] text-[#475467] font-[200]">
-              Lorem ipsum dolor sit amet consectetur.
+            Send us a message.
             </p>
           </div>
 
@@ -121,8 +121,10 @@ const WaitList = ({
             </div>
           </Form>
 
-          <div className="pt-10 flex justify-center items-center" onClick={()=>setSteps(2)}>
-            <div className="md:w-[140px] w-[100px] flex items-center justify-center md:h-[50px] h-[40px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md cursor-pointer">
+          <div className="pt-10 flex justify-center items-center">
+            <div className="md:w-[140px] w-[100px] flex items-center justify-center md:h-[50px] h-[40px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md cursor-pointer"
+              onClick={()=>setSteps(2)}
+            >
               <span className="transform skew-x-12 md:text-[15px] text-white text-[12px] font-[500]">
                 Submit
               </span>

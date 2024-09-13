@@ -63,10 +63,12 @@ export default function Home() {
           </div>
 
           <Image
-            priority
+            // priority
             src={images.iPhone}
             alt="iphone"
-            className="absolute xl:mt-[28rem] md:mt-[26rem] mt-[29rem] inset-0 mx-auto"
+            width={20}
+            height={20}
+            className="absolute mt-[24rem] inset-0 mx-auto w-[313px] h-full"
           />
         </div>
 
@@ -607,20 +609,22 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex md:flex-row flex-col justify-center items-center gap-1  w-full">
-              <input
-                placeholder="Enter email address"
-                className="bg-[#F5F5F5] placeholder:font-[100] placeholder:text-[13px] placeholder:transform placeholder:skew-x-12 !py-4 text-black focus:outline-none focus:border-none  transform -skew-x-12 rounded-md lg:w-[40%] w-full pl-8 "
-              />
+            <div className="flex md:flex-row flex-col justify-center items-center gap-1 w-full">
+              <div className="lg:w-[40%] w-full transform -skew-x-12 bg-[#F5F5F5]">
+                <input
+                  placeholder="Enter email address"
+                  className="bg-transparent placeholder:font-[100] placeholder:text-[13px] !py-4 text-black transform skew-x-12 focus:outline-none focus:border-none rounded-md w-full pl-8 "
+                />
+              </div>
 
-            <div className="lg:w-[80%] xl:w-[600px] w-full flex item-center md:hidden justify-center xl:justify-start gap-2 mt-2 mb-5">
-              <Image src={images.infoCircle} alt="" />
-                <p className="text-[#00000080] text-[12px] font-[100] leading-[16px]">
-                  Waitlist members agree to receiving amazing emails and updates.
-                </p>
-            </div>
+              <div className="lg:w-[80%] xl:w-[600px] w-full flex item-center md:hidden justify-center xl:justify-start gap-2 mt-2 mb-5">
+                <Image src={images.infoCircle} alt="" />
+                  <p className="text-[#00000080] text-[12px] font-[100] leading-[16px]">
+                    Waitlist members agree to receiving amazing emails and updates.
+                  </p>
+              </div>
               <div
-                className="md:w-[140px] w-[120px] flex items-center justify-center  !py-4 mt-2 md:mt-0 bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md cursor-pointer"
+                className="md:w-[140px] w-[120px] flex items-center justify-center !py-4 mt-2 md:mt-0 bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md cursor-pointer"
                 // onClick={() => setIsWaitListModalOpen(true)}
               >
                 <span className="transform skew-x-12 md:text-[14px] text-white text-[12px] font-[200]">
