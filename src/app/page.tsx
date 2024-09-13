@@ -155,6 +155,7 @@ export default function Home() {
                   alt=""
                   width={13}
                   height={13}
+                  unoptimized={true}
                 />
                 <p className="lg:text-[18px] text-[16px] font-[200]  leading-[26px] tracking-[-0.2px] !text-white">
                   Notional & Fractional Trading
