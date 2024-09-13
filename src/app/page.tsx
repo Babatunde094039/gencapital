@@ -67,13 +67,13 @@ export default function Home() {
           </div>
 
           <Image
-            // priority
+            priority
             src={images.iPhone}
             alt="iphone"
             width={20}
             height={20}
             quality={100}
-            unoptimized={true}
+            unoptimized
             className="absolute mt-[24rem] inset-0 mx-auto w-[313px] h-full"
           />
         </div>
