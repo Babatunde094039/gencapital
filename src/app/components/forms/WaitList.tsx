@@ -24,7 +24,38 @@ const WaitList = ({
   const [errorMsgEmail, setErrorMsgEmail] = useState("");
   const [isErrorPhone, setIsErrorPhone] = useState(false);
   const [errorMsgPhone, setErrorMsgPhone] = useState("");
+  const [isSending, setIsSending] =  useState(false)
+
+  const handleSubmit = async ()=> {
+    setIsSending(true)
+    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSexBXfs2UM-_zjiIjSIVUt9W1a7t6IzRjqyVp301gxOolOr5Q/formResponse';
+    try{
+      let data = new FormData();
+      data.append('entry.1684042362', values.fullname);
+      data.append('entry.1451322571', values.company);
+      data.append('entry.1368031414', values.emailaddress);
+      data.append('entry.1752182325', values.phoneNumber);
+      data.append('entry.315929182', values.message);
   
+      const response = await fetch(formUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: data,
+      });
+  
+      if (response) {
+        setSteps(2)
+        setIsSending(false)
+      } else {
+        setIsSending(false)
+        // console.error('Form submission failed');
+      }
+    }catch{
+      setIsSending(false)
+        // console.error('Form submission failed');
+    }
+  }
+
   return (
     <div className="lg:px-6 px-5 pt-6 pb-10">
       {steps === 1 && (
@@ -51,7 +82,7 @@ const WaitList = ({
           >
             <div className="flex flex-col md:flex-row gap-4">
               <CustomInput
-                fieldName={"Fullname"}
+                fieldName={"fullname"}
                 handleOnBlur={() => {}}
                 isError={isError}
                 errorMsg={errorMsg}
@@ -64,7 +95,7 @@ const WaitList = ({
               />
 
               <CustomInput
-                fieldName={"Company"}
+                fieldName={"company"}
                 handleOnBlur={() => {}}
                 isError={isErrorCompany}
                 errorMsg={errorMsgCompany}
@@ -79,7 +110,7 @@ const WaitList = ({
 
             <div className="flex flex-col lg:flex-row gap-4">
               <CustomInput
-                fieldName={"Email address"}
+                fieldName={"emailaddress"}
                 handleOnBlur={() => {}}
                 isError={isErrorEmail}
                 errorMsg={errorMsgEmail}
@@ -92,7 +123,7 @@ const WaitList = ({
               />
 
               <CustomInput
-                fieldName={"Phone Number"}
+                fieldName={"phoneNumber"}
                 handleOnBlur={() => {}}
                 isError={isErrorPhone}
                 errorMsg={errorMsgPhone}
@@ -106,7 +137,7 @@ const WaitList = ({
             </div>
 
             <CustomTextArea
-              fieldName={"Message"}
+              fieldName={"message"}
               handleOnBlur={() => {}}
               label={"Message"}
               placeholder={""}
@@ -123,10 +154,10 @@ const WaitList = ({
 
           <div className="pt-10 flex justify-center items-center">
             <div className="md:w-[140px] w-[100px] flex items-center justify-center md:h-[50px] h-[40px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md cursor-pointer"
-              onClick={()=>setSteps(2)}
+              onClick={()=> !isSending && handleSubmit()}
             >
               <span className="transform skew-x-12 md:text-[15px] text-white text-[12px] font-[500]">
-                Submit
+                {isSending ? 'Sending...' : 'Submit'}
               </span>
             </div>
           </div>

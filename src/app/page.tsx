@@ -34,6 +34,10 @@ export default function Home() {
     value
   ) => `$${value}`;
 
+  const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    emailInput
+  )
+
   return (
     <main className="bg-white">
         <div className="bg-[#061A01] w-full md:h-[80px] h-[72px] flex items-center fixed top-0 z-[100]">
@@ -625,7 +629,6 @@ export default function Home() {
                   className="bg-transparent placeholder:font-[100] placeholder:text-[13px] !py-4 text-black font-[100] transform skew-x-12 focus:outline-none focus:border-none rounded-md w-full pl-8 "
                 />
               </div>
-
               <div className="lg:w-[80%] xl:w-[600px] w-full flex item-center md:hidden justify-center xl:justify-start gap-2 mt-2 mb-5">
                 <Image src={images.infoCircle} alt="" />
                   <p className="text-[#00000080] text-[12px] font-[100] leading-[16px]">
@@ -633,9 +636,9 @@ export default function Home() {
                   </p>
               </div>
               <div
-                className={`md:w-[140px] w-[120px] flex items-center justify-center !py-4 mt-2 md:mt-0 ${emailInput ? 'cursor-pointer' : 'cursor-not-allowed'} bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md `}
+                className={`md:w-[140px] w-[120px] flex items-center justify-center !py-4 mt-2 md:mt-0 ${emailInput && emailRegex ? 'cursor-pointer' : 'cursor-not-allowed'} bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md `}
                 onClick={() =>{ 
-                  if(emailInput) return setIsEmailListModalOpen(true)
+                  if(emailInput && emailRegex) return setIsEmailListModalOpen(true)
                 }}
               >
                 <span className="transform skew-x-12 md:text-[14px] text-white text-[12px] font-[200]">
@@ -643,6 +646,10 @@ export default function Home() {
                 </span>
               </div>
             </div>
+
+            {(emailInput && !emailRegex) && <div className="lg:w-[80%] xl:w-[600px] w-full md:flex item-center hidden justify-center xl:justify-start gap-2 mt-2">
+              <p className="flex justify-start items-start text-red-400 text-start text-xs font-[100]">invalid email format</p>
+            </div>}
 
             <div className="lg:w-[80%] xl:w-[600px] w-full md:flex item-center hidden justify-center xl:justify-start gap-2 mt-2">
               <Image src={images.infoCircle} alt="" />
