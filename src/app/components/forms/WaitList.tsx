@@ -153,8 +153,20 @@ const WaitList = ({
           </Form>
 
           <div className="pt-10 flex justify-center items-center">
-            <div className="md:w-[140px] w-[100px] flex items-center justify-center md:h-[50px] h-[40px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md cursor-pointer"
-              onClick={()=> !isSending && handleSubmit()}
+            <div className={`md:w-[140px] w-[100px] flex items-center justify-center md:h-[50px] h-[40px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md ${(values?.fullname &&
+                  values?.company &&
+                  values?.emailaddress &&
+                  values?.phoneNumber &&
+                  values?.message) ? ' cursor-pointer' : ' cursor-not-allowed' } `}
+              onClick={()=> {
+                if(values?.fullname &&
+                  values?.company &&
+                  values?.emailaddress &&
+                  values?.phoneNumber &&
+                  values?.message){
+                  !isSending && handleSubmit()
+                }
+              }}
             >
               <span className="transform skew-x-12 md:text-[15px] text-white text-[12px] font-[500]">
                 {isSending ? 'Sending...' : 'Submit'}
@@ -167,7 +179,7 @@ const WaitList = ({
       {steps === 2 && (
         <div className="  flex justify-center items-center flex-col  w-full">
           <Image
-            src={images?.successfulWaitList}
+            src={images?.succssList}
             alt=""
             width={352}
             height={208}

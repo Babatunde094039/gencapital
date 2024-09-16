@@ -25,6 +25,7 @@ export default function Home() {
   const [steps, setSteps] = useState(1);
   const [emailStep, setEmailStep] = useState(2);
   const [emailInput, setEmailInput] = useState('')
+  const [isSending, setIsSending] =  useState(false)
 
   const onChange: InputNumberProps["onChange"] = (newValue) => {
     setInputValue(newValue as number);
@@ -37,6 +38,31 @@ export default function Home() {
   const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     emailInput
   )
+
+  const handleSubmit = async ()=> {
+    setIsSending(true)
+    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeGBD_nCpvDwcDmkTD2QJMineEZA-YQ_kPjtcq7qccKPxkGIg/formResponse';
+    try{
+      let data = new FormData();
+      data.append('entry.1636581897', emailInput);
+  
+      const response = await fetch(formUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: data,
+      });
+  
+      if (response) {
+        setIsEmailListModalOpen(true)
+        setIsSending(false)
+        setEmailInput('')
+      } else {
+        setIsSending(false)
+      }
+    }catch{
+      setIsSending(false)
+    }
+  }
 
   return (
     <main className="bg-white">
@@ -625,6 +651,7 @@ export default function Home() {
               <div className="lg:w-[40%] w-full transform -skew-x-12 bg-[#F5F5F5]">
                 <input
                   placeholder="Enter email address"
+                  value={emailInput}
                   onChange={(e)=> setEmailInput(e.target.value)}
                   className="bg-transparent placeholder:font-[100] placeholder:text-[13px] !py-4 text-black font-[100] transform skew-x-12 focus:outline-none focus:border-none rounded-md w-full pl-8 "
                 />
@@ -638,11 +665,11 @@ export default function Home() {
               <div
                 className={`md:w-[140px] w-[120px] flex items-center justify-center !py-4 mt-2 md:mt-0 ${emailInput && emailRegex ? 'cursor-pointer' : 'cursor-not-allowed'} bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md `}
                 onClick={() =>{ 
-                  if(emailInput && emailRegex) return setIsEmailListModalOpen(true)
+                  if(emailInput && emailRegex) return handleSubmit()
                 }}
               >
                 <span className="transform skew-x-12 md:text-[14px] text-white text-[12px] font-[200]">
-                  Join Waitlist
+                  {isSending ? 'Joining...' : 'Join Waitlist'}
                 </span>
               </div>
             </div>
