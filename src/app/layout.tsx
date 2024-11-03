@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Gen Capita",
-  description: "Connecting investors to global securities.",
+  description: "Connecting investors to global opportunities.",
 };
 
 export default function RootLayout({
