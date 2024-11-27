@@ -11,6 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Gen Capita",
   description: "Connecting investors to global opportunities.",
+  other: {
+    'facebook-domain-verification': 'oceqxa7q5oxm76twasjt7q82tferrf',
+  },
 };
 
 export default function RootLayout({

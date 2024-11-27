@@ -704,8 +704,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col justify-end items-end ">
-            <div className="flex justify-end items-end gap-4 cursor-pointer">
+          <div className="flex flex-col lg:justify-end justify-center lg:items-end items-center ">
+            <div className="flex lg:justify-end justify-center lg:items-end items-center gap-4 cursor-pointer">
             <Image
               priority
               src={images?.whatsapp}
