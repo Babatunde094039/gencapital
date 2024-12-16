@@ -31,5 +31,7 @@ export const images = {
   Insta :  require('@/assets/icons/instagram-line 1.svg'),
   linkedIn :  require('@/assets/icons/linkedin-fill 1.svg'),
   succssList :  require('@/assets/icons/succssList.svg'),
+  microsoft :  require('@/assets/icons/microsoft.svg'),
+  nvidia :  require('@/assets/icons/nvidia.svg'),
  
 }; 

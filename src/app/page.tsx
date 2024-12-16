@@ -245,7 +245,7 @@ export default function Home() {
         </div>
 
         <div className="bg-[#071A00] rounded-2xl lg:py-[50px] lg:px-[50px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row gap-8 lg:gap-0 flex-col items-center sticky top-[180px]">
-          <div className="2xl:w-[35%] xl:w-[40%] md:w-[60%] pt-2 md:pt-0">
+          <div className="2xl:w-[35%] xl:w-[40%] w-full pt-2 md:pt-0">
             <div className="flex justify-start items-start flex-col gap-4 pb-[25px] border-b border-[#3CE500] pr-5 ">
               <p className="text-white lg:text-[40px] text-[28px] font-bold leading-[38px] tracking-[-1.38px] ">
                 Moving Money
@@ -322,7 +322,7 @@ export default function Home() {
         </div>
 
         <div className="bg-[#071A00] w-full rounded-2xl 2xl:py-[100px] lg:py-[50px] lg:px-[40px] 2xl:px-[60px] md:px-8 px-4 py-[40px] flex justify-between lg:flex-row flex-col gap-8 lg:gap-0 items-center sticky top-[150px] ">
-          <div className="2xl:w-[35%] xl:w-[40%] md:w-[60%] pt-2 md:pt-0">
+          <div className="2xl:w-[35%] xl:w-[40%] w-full pt-2 md:pt-0">
             <div className="flex justify-start items-start flex-col gap-4 pb-[25px] border-b border-[#3CE500] pr-10 ">
               <p className="text-white lg:text-[40px] text-[28px] font-bold leading-[38px] tracking-[-1.38px] ">
                 The Power of AI
@@ -551,6 +551,30 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="bg-[#F9FAFB] flex flex-col justify-center items-center mb-20 mt-8 py-8">
+        <p className="text-[16px] font-[600] text-[#071A00]">Backed By</p>
+        <div className="flex items-center justify-center gap-4 mt-4">
+
+            <Image
+              priority
+              src={images.nvidia}
+              alt=""
+              width={22}
+              height={22}
+              className="md:w-[45%] w-[35%] object-cover"
+            />
+
+            <Image
+              priority
+              src={images.microsoft}
+              alt=""
+              width={22}
+              height={22}
+              className="md:w-[45%] w-[35%] object-cover"
+            />
         </div>
       </div>
 
