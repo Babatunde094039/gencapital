@@ -578,7 +578,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#F9FAFB]">
+      {/* <div className="bg-[#F9FAFB]">
         <div className={`lg:py-[86px] py-[64px] px-[5%] 2xl:px-0 flex justify-between flex-col-reverse lg:flex-row gap-6 lg:gap-[64px] w-full xl:px-0 xl:w-[1240px] max-w-[${maxWidth}] !mx-auto`}>
           <div className="lg:w-[50%]">
             <Image
@@ -599,7 +599,7 @@ export default function Home() {
             <ParentCollapse />
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className={`bg-[white] md:pt-[80px] pt-[70px] xl:px-0 xl:w-[1240px] max-w-[${maxWidth}] !mx-auto`}>
         <div className="flex justify-center items-center mb-[64px] px-[5%]">
@@ -687,13 +687,13 @@ export default function Home() {
                   </p>
               </div>
               <div
-                className={`md:w-[140px] w-[120px] flex items-center justify-center !py-4 mt-2 md:mt-0 ${emailInput && emailRegex ? 'cursor-pointer' : 'cursor-not-allowed'} bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md `}
+                className={`xl:w-[180px] md:w-[200px] w-[150px] flex items-center justify-center !py-4 mt-2 md:mt-0 ${emailInput && emailRegex ? 'cursor-pointer' : 'cursor-not-allowed'} bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md `}
                 onClick={() =>{ 
                   if(emailInput && emailRegex) return handleSubmit()
                 }}
               >
                 <span className="transform skew-x-12 md:text-[14px] text-white text-[12px] font-[200]">
-                  {isSending ? 'Joining...' : 'Join Waitlist'}
+                  {isSending ? 'Please wait...' : 'Get Exclusive Access'}
                 </span>
               </div>
             </div>
