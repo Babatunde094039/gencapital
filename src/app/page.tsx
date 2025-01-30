@@ -609,7 +609,7 @@ export default function Home() {
             </p>
 
             <p className="text-[#475467] lg:text-[16px] text-[14px] leading-[28px]  font-[100]  lg:w-[55%] text-center">
-              Brokers, asset managers, and fintechs can leverage Gen Capita's
+              Brokers, asset managers, and fintechs can leverage GENCAPITA's
               power to provide clients access to global securities and
               investment tools.
             </p>
@@ -639,7 +639,7 @@ export default function Home() {
           <div className="flex justify-around items-center md:px-[6%] flex-col lg:flex-row lg:items-center md:gap-12 gap-0 lg:gap-0">
             <div className="w-full flex flex-col justify-center items-center lg:justify-start lg:items-start">
               <p className="lg:text-[40px] 2xl:text-[44px] text-[30px] font-semibold md:px-0 px-4 w-full lg:leading-[50px] 2xl:leading-[55px] leading-[40px] text-white text-center lg:text-start">
-                Join the Gen Capita <br /> Channel
+                Join the GENCAPITA <br /> Channel
               </p>
               <div className="px-[15px] py-[20px] flex items-center justify-center md:h-[50px] h-[38px] bg-[white] cursor-pointer transform -skew-x-12 font-[200] rounded-md md:mt-8 mt-6"
                 onClick={()=> window.open('https://whatsapp.com/channel/0029ValKZe1HwXbFg0zDPj2F')}
@@ -664,10 +664,10 @@ export default function Home() {
           <div className="lg:my-[140px] mt-[46px] lg:p-[64px] py-[56px] px-[16px]  bg-white rounded-[24px] flex flex-col justify-center items-center ">
             <div className="lg:!w-[80%] xl:!w-[780px] !w-full  flex justify-center items-center flex-col gap-4 mb-5">
               <p className="text-[#161616] text-center lg:text-[40px] text-[32px] md:font-[700] font-[400] lg:leading-[50px]  ">
-                Take Charge. Invest Intelligently.
+                Get Exclusive Access!
               </p>
               <p className="text-[#161616] text-center lg:text-[18px] text-[16px] w-[60%] md:w-full font-[100] leading-[31px]  ">
-                Sign up now and stay ahead of the curve.
+                Sign up to start using GENCAPITA
               </p>
             </div>
 
@@ -687,13 +687,13 @@ export default function Home() {
                   </p>
               </div>
               <div
-                className={`xl:w-[180px] md:w-[200px] w-[150px] flex items-center justify-center !py-4 mt-2 md:mt-0 ${emailInput && emailRegex ? 'cursor-pointer' : 'cursor-not-allowed'} bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md `}
+                className={`xl:w-[140px] md:w-[160px] w-[120px] flex items-center justify-center !py-4 mt-2 md:mt-0 ${emailInput && emailRegex ? 'cursor-pointer' : 'cursor-not-allowed'} bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md `}
                 onClick={() =>{ 
                   if(emailInput && emailRegex) return handleSubmit()
                 }}
               >
                 <span className="transform skew-x-12 md:text-[14px] text-white text-[12px] font-[200]">
-                  {isSending ? 'Please wait...' : 'Get Exclusive Access'}
+                  {isSending ? 'Please wait...' : 'Sign Up'}
                 </span>
               </div>
             </div>
@@ -746,7 +746,7 @@ export default function Home() {
             />
             </div>
             <p className="mt-[10px] text-white font-[100] text-[13px]">
-              © Copyright Gen Capita {new Date().getFullYear()}.
+              © Copyright GENCAPITA {new Date().getFullYear()}.
             </p>
           </div>
         </div>
