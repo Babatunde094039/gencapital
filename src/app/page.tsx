@@ -683,7 +683,7 @@ export default function Home() {
               <div className="lg:w-[80%] xl:w-[600px] w-full flex item-center md:hidden justify-center xl:justify-start gap-2 mt-2 mb-5">
                 <Image src={images.infoCircle} alt="" />
                   <p className="text-[#00000080] text-[12px] font-[100] leading-[16px]">
-                    Waitlist members agree to receiving emails and updates.
+                    I agree to receiving emails from GENCAPITA
                   </p>
               </div>
               <div
