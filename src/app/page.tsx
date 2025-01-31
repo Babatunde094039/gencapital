@@ -74,9 +74,9 @@ export default function Home() {
               alt="logo"
               className="md:w-[180px] w-[120px]"
             />
-            <Link href={'#WaitList'} className="2xl:w-[155px] md:w-[140px] w-[100px] flex items-center justify-center md:h-[50px] 2xl:h-[55px] h-[40px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
+            <Link href={'#WaitList'} className="md:w-[200px] w-[150px] flex items-center justify-center md:h-[50px] 2xl:h-[55px] h-[40px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
               <span className="transform skew-x-12 2xl:text-[16px] md:text-[15px] text-[12px] !text-[#FFFFFF]">
-                Join the Waitlist{" "}
+                Get Exclusive Access{" "}
               </span>
             </Link>
           </div>
@@ -89,9 +89,9 @@ export default function Home() {
             <p className="3xl:text-[24px] md:text-[22px] text-[18px] md:w-[48%] xl:w-[626px] w-[200px] text-center font-[100] mt-6 !text-[#FFFFFF]">
               Connecting investors to global opportunities.
             </p>
-            <Link href={'#WaitList'} className="2xl:w-[155px] w-[140px] mt-8 flex items-center justify-center 2xl:h-[55px] h-[50px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
+            <Link href={'#WaitList'} className="w-[200px] mt-8 flex items-center justify-center 2xl:h-[55px] h-[50px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-md">
               <span className="transform skew-x-12 2xl:text-[16px] text-[15px] !text-white">
-                Join the Waitlist{" "}
+                Get Exclusive Access{" "}
               </span>
             </Link>
           </div>
@@ -705,7 +705,7 @@ export default function Home() {
             <div className="lg:w-[80%] xl:w-[600px] w-full md:flex item-center hidden justify-center xl:justify-start gap-2 mt-2">
               <Image src={images.infoCircle} alt="" />
                 <p className="text-[#00000080] text-[12px] font-[100] leading-[16px]">
-                  Waitlist members agree to receiving amazing emails and updates.
+                  I agree to receiving emails from GENCAPITA
                 </p>
             </div>
 
