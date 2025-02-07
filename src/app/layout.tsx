@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "GENCAPITA",
-  description: "Connecting investors to global opportunities.",
+  description: "Smart Investing",
   other: {
     'facebook-domain-verification': 'oceqxa7q5oxm76twasjt7q82tferrf',
   },
