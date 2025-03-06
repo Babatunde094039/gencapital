@@ -497,8 +497,8 @@ export default function Home() {
           </div>
 
           {/* Investments are risky. */}
-          <div className="bg-[#2D3339] rounded-2xl text-[12px] !font-[100] px-[5%] xl:px-0 xl:w-[1240px] max-w-[1440px] !mx-auto ">
-            <div className="py-8 px-10">
+          <div className="bg-[#2D3339] md:rounded-2xl rounded-3xl text-[12px] !font-[100] px-[5%] xl:px-0 xl:w-[1240px] max-w-[1440px] xl:mx-auto mx-4 ">
+            <div className="md:py-9 py-7 md:px-7 px-1">
               <p className="pb-4">Investments are risky</p>
               <p className="pb-4">
                 <b>Investment Accounts</b> are offered through GEN INVEST LLC
