@@ -93,7 +93,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" md:h-[820px] h-[650px] w-full bg-custom-gradient relative md:pt-[300px] pt-[120px]">
+      <div className=" md:h-[820px] h-[670px] w-full bg-custom-gradient relative md:pt-[300px] pt-[200px]">
         <div
           className={`flex flex-col items-center justify-center pt-16 px-[5%] 2xl:w-full xl:w-[883px] md:px-0 max-w-[${maxWidth}] !mx-auto`}
         >
