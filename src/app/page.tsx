@@ -1,7 +1,6 @@
 "use client";
 import { images } from "@/theme";
 import Image from "next/image";
-import { FaArrowRight } from "react-icons/fa";
 import test from "@/assets/stocksSection.svg";
 import { InputNumberProps, Slider, SliderSingleProps } from "antd";
 import { useState } from "react";
