@@ -559,15 +559,35 @@ export default function Home() {
                 local laws and regulations.
               </p>
               <div className="pb-2 text-[#2EB200]">
-                <span className="border-r border-[#2EB200] pr-2">FINRA’s AdvisorsCheck</span>
-                <span className="pl-2">Customer Relationship Summary</span>
+                <span
+                  className="border-r border-[#2EB200] pr-2 cursor-pointer"
+                  onClick={() =>
+                    window.open(
+                      "https://adviserinfo.sec.gov/firm/summary/333196"
+                    )
+                  }
+                >
+                  FINRA’s AdvisorsCheck
+                </span>
+                <span
+                  className="pl-2 cursor-pointer"
+                  onClick={() =>
+                    window.open(
+                      "https://reports.adviserinfo.sec.gov/crs/crs_333196.pdf"
+                    )
+                  }
+                >
+                  Customer Relationship Summary
+                </span>
               </div>
             </div>
           </div>
-            
+
           <div className="mx-auto w-full flex flex-col items-center py-10 text-[#A7B3B9] text-[12px] font-[100]">
-          <p className="" > GEN. 276 5th Ave, Ste 704, New York, NY 10001</p>
-          <p  className="" >© {new Date().getFullYear()} GENCAPITA™. All rights reserved.</p>
+            <p className=""> GEN. 276 5th Ave, Ste 704, New York, NY 10001</p>
+            <p className="">
+              © {new Date().getFullYear()} GENCAPITA™. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
