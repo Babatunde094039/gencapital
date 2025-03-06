@@ -534,12 +534,24 @@ export default function Home() {
                 rights reserved. For more information about our advisory
                 services, please view our ADV Part 2A Brochure and Part 3
                 Relationship Summary at{" "}
-                <span className="text-[#2EB200] cursor-pointer">
+                <span className="text-[#2EB200] cursor-pointer"
+                 onClick={() =>
+                  window.open(
+                    "https://www.sec.gov"
+                  )
+                }
+                >
                   https://www.sec.gov.
                 </span>{" "}
                 Free and simple tools are available to research firms and
                 financial professionals at{" "}
-                <span className="text-[#2EB200] cursor-pointer">
+                <span className="text-[#2EB200] cursor-pointer"
+                  onClick={() =>
+                    window.open(
+                      "https://www.investor.gov/CRS"
+                    )
+                  }
+                >
                   https://www.investor.gov/CRS
                 </span>{" "}
                 , which also provides educational materials about
