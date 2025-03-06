@@ -428,22 +428,22 @@ export default function Home() {
           <div className="px-[5%] xl:px-0 xl:w-[1240px]  max-w-[1440px]  !mx-auto pb-16 pt-4 flex lg:flex-row flex-col-reverse justify-between ">
             <div className="grid lg:grid-cols-4 grid-cols-2 lg:w-[45%] w-full">
               <div className="text-[#828F9B] cursor-pointer">
-                <p className="font-[700] text-[14px] pb-4">Product</p>
+                <p className="font-[700] text-[14px] pb-4 mt-10 lg:mt-0">Product</p>
                 <p className="text-[14px] font-[100]">Invest</p>
               </div>
-              <div className="text-[#828F9B] cursor-pointer">
-                <p className="font-[700] text-[14px] pb-4">Resources</p>
+              <div className="text-[#828F9B] cursor-pointer ">
+                <p className="font-[700] text-[14px] pb-4 mt-10 lg:mt-0">Resources</p>
                 <p className="text-[14px] font-[100] pb-4">Support</p>
                 <p className="text-[14px] pb-4 font-[100]">GENie</p>
                 <p className="text-[14px] font-[100]">Learn</p>
               </div>
-              <div className="text-[#828F9B] cursor-pointer mt-8 lg:mt-0">
+              <div className="text-[#828F9B] cursor-pointer mt-10 lg:mt-0">
                 <p className="font-[700] text-[14px] pb-4">Company</p>
                 <p className="text-[14px] pb-4 font-[100]">About Us</p>
                 <p className="text-[14px] pb-4 font-[100]">Newsroom</p>
                 <p className="text-[14px] pb-4 font-[100]">Careers</p>
               </div>
-              <div className="text-white cursor-pointer mt-8 lg:mt-0">
+              <div className="text-white cursor-pointer mt-10 lg:mt-0">
                 <p className="font-[700] text-[14px] pb-4">
                   Legal & Regulatory
                 </p>
@@ -453,7 +453,7 @@ export default function Home() {
               </div>
             </div>
             <div className="lg:w-[38%] w-full mt-6 lg:mt-0">
-              <p className="text-[20px] text-white font-[600]">
+              <p className="md:text-[20px] text-[25px] text-white font-[600]">
                 Stay Ahead with Smarter Investing
               </p>
               <p className="text-[14px] text-white font-[100] py-4">
