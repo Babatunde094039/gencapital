@@ -103,7 +103,8 @@ export default function Home() {
             Smart Investing
           </p>
           <Link
-            href={"#WaitList"}
+            href={"https://app.gencapita.com/signup"}
+            target='_blank'
             className="w-fit px-6 mt-10 flex items-center justify-center h-[50px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-[4px]"
           >
             <span className="transform skew-x-12 text-[14px] font-[600] !text-[#090A0B]">
