@@ -70,23 +70,23 @@ export default function Home() {
             priority
             src={images.genCapitaLogo}
             alt="logo"
-            className="md:w-[180px] w-[120px]"
+            className="md:w-[180px] w-[110px]"
           />
 
           <div className="flex items-center gap-4">
             <div
               onClick={() => window.open("https://app.gencapita.com")}
-              className=" cursor-pointer w-fit px-8 flex items-center justify-center md:h-[45px] h-[40px] bg-transparent border border-white transform -skew-x-12 rounded-[4px]"
+              className=" cursor-pointer w-fit md:px-8 px-4 flex items-center justify-center md:h-[45px] h-[30px] bg-transparent border border-white transform -skew-x-12 rounded-[4px]"
             >
-              <span className="transform skew-x-12 text-[14px] !text-white font-[600]">
+              <span className="transform skew-x-12 md:text-[14px] text-[12px] !text-white font-[600]">
                 Login
               </span>
             </div>
             <div
               onClick={() => window.open("https://app.gencapita.com/signup")}
-              className=" cursor-pointer w-fit px-6 md:flex hidden items-center justify-center md:h-[45px] h-[40px] bg-[#2EB200] transform -skew-x-12 rounded-[4px]"
+              className=" cursor-pointer w-fit md:px-6 px-4  flex items-center justify-center md:h-[45px] h-[30px] bg-[#2EB200] transform -skew-x-12 rounded-[4px]"
             >
-              <span className="transform skew-x-12 text-[14px] !text-[#090A0B] font-[600]">
+              <span className="transform skew-x-12 md:text-[14px] text-[12px] !text-[#090A0B] font-[600]">
                 Sign Up
               </span>
             </div>
