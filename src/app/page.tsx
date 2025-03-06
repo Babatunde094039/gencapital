@@ -93,19 +93,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" md:h-[820px] h-[670px] w-full bg-custom-gradient relative md:pt-[300px] pt-[200px]">
+      <div className=" md:h-[820px] h-[670px] w-full bg-custom-gradient relative md:pt-[300px] pt-[250px]">
         <div
           className={`flex flex-col items-center justify-center pt-16 px-[5%] 2xl:w-full xl:w-[883px] md:px-0 max-w-[${maxWidth}] !mx-auto`}
         >
           <p
-            className={`${OpenSauceSans.className} font-[700] 3xl:text-[92px] xl:text-[72px] text-[55px] text-center !text-[#FFFFFF] leading-[70px] md:leading-none`}
+            className={`${OpenSauceSans.className} font-[700] 3xl:text-[92px] xl:text-[72px] md:text-[55px] text-[40px] text-center !text-[#FFFFFF] leading-[70px] md:leading-none`}
           >
             Smart Investing
           </p>
           <Link
             href={"https://app.gencapita.com/signup"}
             target='_blank'
-            className="w-fit px-6 mt-10 flex items-center justify-center h-[50px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-[4px]"
+            className="w-fit px-6 md:mt-10 mt-4 flex items-center justify-center h-[50px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-[4px]"
           >
             <span className="transform skew-x-12 text-[14px] font-[600] !text-[#090A0B]">
               Get Started
