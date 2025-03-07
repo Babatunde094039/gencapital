@@ -11,6 +11,7 @@ import { OpenSauceSans } from "@/utils/font";
 import { maxWidth } from "@/helpers";
 import EmailListSuccess from "./components/forms/EmailListSuccess";
 import ChartComponent from "./components/chart";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState(150);
@@ -20,6 +21,7 @@ export default function Home() {
   const [emailStep, setEmailStep] = useState(2);
   const [emailInput, setEmailInput] = useState("");
   const [isSending, setIsSending] = useState(false);
+  const router = useRouter();
 
   const onChange: InputNumberProps["onChange"] = (newValue) => {
     setInputValue(newValue as number);
@@ -62,7 +64,7 @@ export default function Home() {
 
   return (
     <main className="bg-white">
-      {/* <div className="bg-[#061A01] w-full md:h-[80px] h-[72px] flex items-center fixed top-0 z-[100]">
+      <div className="bg-[#061A01] w-full md:h-[80px] h-[72px] flex items-center fixed top-0 z-[100]">
         <div
           className={`flex justify-between items-center bg-[#061A01] xl:w-[1280px] w-full h-[56px] xl:px-[32px] px-[8%] py-5 max-w-[${maxWidth}] !mx-auto`}
         >
@@ -92,7 +94,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       <div className=" md:h-[820px] h-[670px] w-full bg-custom-gradient relative md:pt-[300px] pt-[250px]">
         <div
           className={`flex flex-col items-center justify-center pt-16 px-[5%] 2xl:w-full xl:w-[883px] md:px-0 max-w-[${maxWidth}] !mx-auto`}
@@ -104,7 +106,7 @@ export default function Home() {
           </p>
           <Link
             href={"https://app.gencapita.com/signup"}
-            target='_blank'
+            target="_blank"
             className="w-fit px-6 md:mt-10 mt-4 flex items-center justify-center h-[50px] bg-[#2EB200] transform -skew-x-12 font-[200] rounded-[4px]"
           >
             <span className="transform skew-x-12 text-[14px] font-[600] !text-[#090A0B]">
@@ -428,11 +430,15 @@ export default function Home() {
           <div className="px-[5%] xl:px-0 xl:w-[1240px]  max-w-[1440px]  !mx-auto pb-16 pt-4 flex lg:flex-row flex-col-reverse justify-between ">
             <div className="grid lg:grid-cols-4 grid-cols-2 lg:w-[45%] w-full">
               <div className="text-[#828F9B] cursor-pointer">
-                <p className="font-[700] text-[14px] pb-4 mt-10 lg:mt-0">Product</p>
+                <p className="font-[700] text-[14px] pb-4 mt-10 lg:mt-0">
+                  Product
+                </p>
                 <p className="text-[14px] font-[100]">Invest</p>
               </div>
               <div className="text-[#828F9B] cursor-pointer ">
-                <p className="font-[700] text-[14px] pb-4 mt-10 lg:mt-0">Resources</p>
+                <p className="font-[700] text-[14px] pb-4 mt-10 lg:mt-0">
+                  Resources
+                </p>
                 <p className="text-[14px] font-[100] pb-4">Support</p>
                 <p className="text-[14px] pb-4 font-[100]">GENie</p>
                 <p className="text-[14px] font-[100]">Learn</p>
@@ -447,9 +453,34 @@ export default function Home() {
                 <p className="font-[700] text-[14px] pb-4">
                   Legal & Regulatory
                 </p>
-                <p className="text-[14px] pb-4 font-[100]">Terms of Use</p>
-                <p className="text-[14px] pb-4 font-[100]">Privacy Policy</p>
-                <p className="text-[14px] pb-4 font-[100]">Disclosures</p>
+                <p
+                  className="text-[14px] pb-4 font-[100]"
+                  onClick={() => {
+                    router.push("legal");
+                    localStorage.setItem("selelectedTab", "0");
+                  }}
+                >
+                  Terms of Use
+                </p>
+                <p
+                  className="text-[14px] pb-4 font-[100]"
+                  onClick={() => {
+                    router.push("legal");
+                    localStorage.setItem("selelectedTab", "1");
+                  }}
+                >
+                  Privacy Policy
+                </p>
+                <p
+                  className="text-[14px] pb-4 font-[100]"
+                 
+                  onClick={() => {
+                    router.push("legal");
+                    localStorage.setItem("selelectedTab", "3");
+                  }}
+                >
+                  Disclosures
+                </p>
               </div>
             </div>
             <div className="lg:w-[38%] w-full mt-6 lg:mt-0">
@@ -535,23 +566,17 @@ export default function Home() {
                 rights reserved. For more information about our advisory
                 services, please view our ADV Part 2A Brochure and Part 3
                 Relationship Summary at{" "}
-                <span className="text-[#2EB200] cursor-pointer"
-                 onClick={() =>
-                  window.open(
-                    "https://www.sec.gov"
-                  )
-                }
+                <span
+                  className="text-[#2EB200] cursor-pointer"
+                  onClick={() => window.open("https://www.sec.gov")}
                 >
                   https://www.sec.gov.
                 </span>{" "}
                 Free and simple tools are available to research firms and
                 financial professionals at{" "}
-                <span className="text-[#2EB200] cursor-pointer"
-                  onClick={() =>
-                    window.open(
-                      "https://www.investor.gov/CRS"
-                    )
-                  }
+                <span
+                  className="text-[#2EB200] cursor-pointer"
+                  onClick={() => window.open("https://www.investor.gov/CRS")}
                 >
                   https://www.investor.gov/CRS
                 </span>{" "}
