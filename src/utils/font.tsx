@@ -13,6 +13,11 @@ export const OpenSauceOne = localFont({
         style: 'normal',
       },
       {
+        path: "../assets/font/OpenSauceOne/OpenSauceOne-Regular.ttf",
+        weight: "400",
+        style: "normal",
+      },
+      {
         path: '../assets/font/OpenSauceOne/OpenSauceOne-Medium.ttf',
         weight: '500',
         style: 'normal',

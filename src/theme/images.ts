@@ -33,5 +33,17 @@ export const images = {
   succssList :  require('@/assets/icons/succssList.svg'),
   microsoft :  require('@/assets/icons/microsoft.svg'),
   nvidia :  require('@/assets/icons/nvidia.svg'),
+  downCaretWhite : require('@/assets/icons/chevron-downWhite.svg'),
+  check : require('@/assets/icons/check.svg'),
+  downloadIcon : require('@/assets/icons/download-01.svg'),
+  logo : require('@/assets/icons/logo.svg'),
+  downcaret : require('@/assets/icons/chevron-down.svg'),
+  menu : require('@/assets/icons/menu.svg'),
+
+
+
+  
+
+
  
 }; 
