@@ -47,6 +47,7 @@ const Legal = () => {
       Component: <Alpaca />,
     },
   ];
+  
 
   return (
     <>
