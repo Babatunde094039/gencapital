@@ -12,6 +12,7 @@ import Image from "next/image";
 import { images } from "@/theme";
 import ParentWrapper from "../components/parentWrapper/parentWrapper";
 import Footer from "../components/footer";
+import { useSearchParams } from "next/navigation";
 
 const Legal = () => {
   const modifiedIndex =typeof window !== 'undefined' && window.localStorage && localStorage.getItem("selelectedTab");
@@ -19,8 +20,10 @@ const Legal = () => {
     parseInt(modifiedIndex as string) || 0
   );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const params =  new URLSearchParams(window.location.search)
-  const doc =  params.get("doc");
+  const searchParams = useSearchParams();
+  // const doc = searchParams.get("doc");
+  // const params =  new URLSearchParams(window.location.search)
+  const doc =  searchParams.get("doc");
 
   const tabList = [
     {
