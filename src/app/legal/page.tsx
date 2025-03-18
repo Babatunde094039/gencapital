@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import LegalHeader from "../components/legals";
 import Terms from "../components/legals/terms";
@@ -18,6 +19,8 @@ const Legal = () => {
     parseInt(modifiedIndex as string) || 0
   );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const params =  new URLSearchParams(window.location.search)
+  const doc =  params.get("doc");
 
   const tabList = [
     {
@@ -48,6 +51,18 @@ const Legal = () => {
     },
   ];
   
+  useEffect(()=>{
+    if(doc == 'terms'){
+      localStorage.setItem("selelectedTab", '0')
+      setSelectedTab(0)
+    }else if(doc == 'disclosure'){
+      localStorage.setItem("selelectedTab", '3')
+      setSelectedTab(3)
+    }else if (doc == 'privacy'){
+      localStorage.setItem("selelectedTab", '1')
+      setSelectedTab(1)
+    }
+  },[])
 
   return (
     <>
