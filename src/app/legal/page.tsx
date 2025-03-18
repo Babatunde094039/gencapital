@@ -14,16 +14,18 @@ import ParentWrapper from "../components/parentWrapper/parentWrapper";
 import Footer from "../components/footer";
 import { useSearchParams } from "next/navigation";
 
-const Legal = () => {
+const Legal = ({ searchParams }: { searchParams: { doc?: string } }) => {
   const modifiedIndex =typeof window !== 'undefined' && window.localStorage && localStorage.getItem("selelectedTab");
   const [selelectedTab, setSelectedTab] = useState(
     parseInt(modifiedIndex as string) || 0
   );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
   // const doc = searchParams.get("doc");
+  
   // const params =  new URLSearchParams(window.location.search)
-  const doc =  searchParams.get("doc");
+  // const doc =  params.get("doc");
+  const doc = searchParams.doc;
 
   const tabList = [
     {
